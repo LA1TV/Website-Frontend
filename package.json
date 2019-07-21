@@ -1,0 +1,31 @@
+{
+  "name": "la1tv-frontend",
+  "version": "1.0.0",
+  "description": "New website frontend written in Node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LA1TV/Website-Frontend.git"
+  },
+  "keywords": [
+    "web",
+    "frontend",
+    "la1tv",
+    "node",
+    "nextjs"
+  ],
+  "author": "LA1TV",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LA1TV/Website-Frontend/issues"
+  },
+  "homepage": "https://github.com/LA1TV/Website-Frontend#readme",
+  "dependencies": {
+    "next": "^9.0.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  }
+}
