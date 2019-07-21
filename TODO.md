@@ -1,4 +1,4 @@
 # TODO
 
-[ ] Content Security Policy 
-[ ] Global CSS - Resets
+- [ ] Content Security Policy 
+- [ ] Global CSS - Resets
