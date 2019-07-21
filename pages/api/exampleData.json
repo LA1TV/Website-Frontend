@@ -1,0 +1,168 @@
+{
+    "info": {
+        "statusCode": 200,
+        "timeGenerated": 1563731671
+    },
+    "data": {
+        "mediaItem": {
+            "id": 328,
+            "name": "Grizedale",
+            "description": null,
+            "coverArtUrls": null,
+            "scheduledPublishTime": 1435309200,
+            "liveStream": null,
+            "vod": {
+                "available": true,
+                "timeRecorded": null,
+                "duration": 277.077333,
+                "processing": {
+                    "completed": true,
+                    "percentage": null,
+                    "message": null,
+                    "error": false
+                },
+                "chapters": [],
+                "viewCount": 788,
+                "qualities": [
+                    {
+                        "id": 1,
+                        "name": "1080p"
+                    },
+                    {
+                        "id": 2,
+                        "name": "720p"
+                    },
+                    {
+                        "id": 3,
+                        "name": "480p"
+                    },
+                    {
+                        "id": 4,
+                        "name": "360p"
+                    },
+                    {
+                        "id": 6,
+                        "name": "160p"
+                    }
+                ],
+                "urlData": [
+                    {
+                        "quality": {
+                            "id": 1,
+                            "name": "1080p"
+                        },
+                        "urls": [
+                            {
+                                "url": "https://www.la1tv.co.uk/file/61697",
+                                "type": "application/x-mpegURL",
+                                "supportedDevices": null
+                            },
+                            {
+                                "url": "https://www.la1tv.co.uk/file/61690",
+                                "type": "video/mp4",
+                                "supportedDevices": null
+                            }
+                        ]
+                    },
+                    {
+                        "quality": {
+                            "id": 2,
+                            "name": "720p"
+                        },
+                        "urls": [
+                            {
+                                "url": "https://www.la1tv.co.uk/file/61705",
+                                "type": "application/x-mpegURL",
+                                "supportedDevices": null
+                            },
+                            {
+                                "url": "https://www.la1tv.co.uk/file/61698",
+                                "type": "video/mp4",
+                                "supportedDevices": null
+                            }
+                        ]
+                    },
+                    {
+                        "quality": {
+                            "id": 3,
+                            "name": "480p"
+                        },
+                        "urls": [
+                            {
+                                "url": "https://www.la1tv.co.uk/file/61713",
+                                "type": "application/x-mpegURL",
+                                "supportedDevices": null
+                            },
+                            {
+                                "url": "https://www.la1tv.co.uk/file/61706",
+                                "type": "video/mp4",
+                                "supportedDevices": null
+                            }
+                        ]
+                    },
+                    {
+                        "quality": {
+                            "id": 4,
+                            "name": "360p"
+                        },
+                        "urls": [
+                            {
+                                "url": "https://www.la1tv.co.uk/file/61721",
+                                "type": "application/x-mpegURL",
+                                "supportedDevices": null
+                            },
+                            {
+                                "url": "https://www.la1tv.co.uk/file/61714",
+                                "type": "video/mp4",
+                                "supportedDevices": null
+                            }
+                        ]
+                    },
+                    {
+                        "quality": {
+                            "id": 6,
+                            "name": "160p"
+                        },
+                        "urls": [
+                            {
+                                "url": "https://www.la1tv.co.uk/file/61729",
+                                "type": "application/x-mpegURL",
+                                "supportedDevices": null
+                            },
+                            {
+                                "url": "https://www.la1tv.co.uk/file/61722",
+                                "type": "video/mp4",
+                                "supportedDevices": null
+                            }
+                        ]
+                    }
+                ]
+            },
+            "viewCount": 788,
+            "numLikes": 1,
+            "numDislikes": 0,
+            "embed": {
+                "iframeUrl": "https://embed.la1tv.co.uk/328"
+            },
+            "timeUpdated": 1498657202,
+            "siteUrl": "https://www.la1tv.co.uk/player/328"
+        },
+        "playlists": [
+            {
+                "id": 131,
+                "name": "ExtraVision 2015",
+                "description": null,
+                "show": {
+                    "id": 17,
+                    "seriesNumber": 1
+                },
+                "siteUrl": "https://www.la1tv.co.uk/playlist/131",
+                "coverArtUrls": {
+                    "thumbnail": "https://www.la1tv.co.uk/file/26264",
+                    "full": "https://www.la1tv.co.uk/file/26262"
+                },
+                "timeUpdated": 1498657202
+            }
+        ]
+    }
+}

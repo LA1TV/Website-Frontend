@@ -5,7 +5,6 @@ import React from 'react'
 
 const StyledNav = styled.nav`
     width: 100%;
-    display: flex-box;
 `
 
 const Navigation = ({ children }) => (
