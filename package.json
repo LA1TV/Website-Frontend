@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/LA1TV/Website-Frontend#readme",
   "dependencies": {
+    "dotenv": "^8.0.0",
     "next": "^9.0.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
