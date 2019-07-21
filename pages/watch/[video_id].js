@@ -1,9 +1,18 @@
 import React from 'react'
 import fetch from 'isomorphic-unfetch'
+import VideoDisplay from 'components/VideoDisplay'
+import styled from 'styled-components'
+
+const Fancy = styled.div`
+    margin: 50px auto;
+`
 
 const Post = ({ name }) => (
   <>
-    <h1>{name}</h1>
+    <Fancy>
+        <h1>{name}</h1>
+        <VideoDisplay />
+    </Fancy>
   </>
 )
 

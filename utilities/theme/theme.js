@@ -9,8 +9,8 @@ const theme = {
         double: pxToRem(24),
     },
     color: {
-        background: '#FFFFFF',
-        primary: '#222222',
+        background: '#1e1e1e',
+        primary: '#f9f9f9',
         accent: '#bb0022',
     }
 }

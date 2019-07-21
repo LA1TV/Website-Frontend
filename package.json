@@ -30,10 +30,13 @@
     "isomorphic-unfetch": "^3.0.0",
     "next": "^9.0.2",
     "react": "^16.8.6",
+    "react-awesome-player": "^1.0.8",
     "react-dom": "^16.8.6",
+    "react-player": "^1.11.1",
     "styled-components": "^4.3.2"
   },
   "devDependencies": {
-    "babel-plugin-module-resolver": "^3.2.0"
+    "babel-plugin-module-resolver": "^3.2.0",
+    "clappr": "^0.3.6"
   }
 }

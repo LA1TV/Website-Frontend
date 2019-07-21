@@ -4,6 +4,7 @@ import react from 'react';
 
 const StyledLink = styled.a`
     text-decoration: none;
+    color: ${({theme}) => theme.color.primary };
 
     :hover,
     :active {

@@ -4,8 +4,13 @@ import react from 'react';
 
 const StyledLink = styled(Link)`
     text-decoration: none;
-    padding: ${({ theme }) => theme.spacing.base};
+    padding: ${({ theme }) => theme.spacing.double };
     display: inline-block;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: ${({ theme }) => theme.color.background};
+    color: ${({ theme }) => theme.color.primary};
+    transition: background-color 50ms linear, color 50ms linear;
 
     :hover,
     :active {
