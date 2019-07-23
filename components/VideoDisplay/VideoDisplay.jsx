@@ -1,9 +1,32 @@
 import React from 'react';
-import dynamic from 'next/dynamic';
+import styled from 'styled-components'
 
-const VideoDisplay = ({ children, className, href }) => (
-  // <ReactPlayer url={["https://www.la1tv.co.uk/file/61690"]} controls="true" allowFullScreen light="https://www.la1tv.co.uk/file/26264"/>
-  <iframe src="https://embed.la1tv.co.uk/328"></iframe>
+const StyledIframe = styled.iframe`
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+`
+
+const StyledVideoDisplayDiv = styled.div`
+    position: relative;
+    padding-bottom: calc(calc(9/16 * 100%));
+`
+
+const VideoDisplay = ({ className, source }) => (
+  <StyledVideoDisplayDiv>
+    <StyledIframe
+      className={className}
+      src={source}
+      frameBorder="0"
+      allowfullscreen
+      webkitallowfullscreen
+      mozallowfullscreen
+      showHeading="0"
+      flush="1"
+      disableFullScreen="0" />
+  </StyledVideoDisplayDiv>
 );
-  
+
 export default VideoDisplay;

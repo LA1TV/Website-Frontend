@@ -1,6 +1,11 @@
 import fetch from 'isomorphic-unfetch'
 require('dotenv').config()
 
+const parseResponse = ({ mediaItem: { name, embed: { iframeUrl } } }) => ({
+  name,
+  embed: iframeUrl
+})
+
 const handle = async ({ query: { videoId } }, res) => {
   const url = `https://www.la1tv.co.uk/api/v1/mediaItems/${videoId}`
 
@@ -12,11 +17,14 @@ const handle = async ({ query: { videoId } }, res) => {
     }
   })
 
-  const response = await la1tv.json()
+  const { data } = await la1tv.json()
 
-  const parsedResponse = {
-    name: response.data.mediaItem.name
+  if (data === undefined) {
+    res.status(404).send('Video not found :(')
+    return
   }
+
+  const parsedResponse = parseResponse(data)
 
   res.send(parsedResponse)
 }
