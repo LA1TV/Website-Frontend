@@ -1,2 +1,2 @@
 # Website Frontend
-New website frontend written in Node.js
+New website front end for LA1TV written in React and utilising next.js.
