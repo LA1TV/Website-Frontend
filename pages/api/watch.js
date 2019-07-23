@@ -14,8 +14,14 @@ const handle = async ({ query: { videoId } }, res) => {
 
   const response = await la1tv.json()
 
+  if (response.data === undefined) {
+    res.status(404).send("Video not found :(");
+    return
+  }
+
   const parsedResponse = {
-    name: response.data.mediaItem.name
+    name: response.data.mediaItem.name,
+    embed: response.data.mediaItem.embed.iframeUrl
   }
 
   res.send(parsedResponse)
