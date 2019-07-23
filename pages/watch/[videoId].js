@@ -17,7 +17,7 @@ const Post = ({ name }) => (
 )
 
 Post.getInitialProps = async function ({ query: { videoId } }) {
-  const res = await fetch(`http://localhost:3000/api/watch?video_id=${videoId}`)
+  const res = await fetch(`http://localhost:3000/api/watch?videoId=${videoId}`)
   const response = await res.json()
 
   return response
