@@ -49,5 +49,4 @@ table {
 }
 `
 
-
-export default globalCss;
+export default globalCss

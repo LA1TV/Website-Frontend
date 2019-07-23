@@ -6,28 +6,28 @@ import Navigation from 'components/Navigation'
 
 class AppWrapper extends App {
   static async getInitialProps ({ Component, ctx }) {
-    let pageProps = {};
+    let pageProps = {}
 
     if (Component.getInitialProps) {
-      pageProps = await Component.getInitialProps(ctx);
+      pageProps = await Component.getInitialProps(ctx)
     }
 
     return { pageProps }
   }
 
   render () {
-    const { Component, pageProps } = this.props;
+    const { Component, pageProps } = this.props
 
     return (
       <Container>
         <ThemeProvider theme={theme}>
-            <Navigation>
-                <Component {...pageProps} />
-            </Navigation>
+          <Navigation>
+            <Component {...pageProps} />
+          </Navigation>
         </ThemeProvider>
       </Container>
-    );
+    )
   }
 }
 
-export default AppWrapper;
+export default AppWrapper

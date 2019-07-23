@@ -10,17 +10,17 @@ const Fancy = styled.div`
 const Post = ({ name }) => (
   <>
     <Fancy>
-        <h1>{name}</h1>
-        <VideoDisplay />
+      <h1>{name}</h1>
+      <VideoDisplay />
     </Fancy>
   </>
 )
 
-Post.getInitialProps = async function ({ query: { video_id } }) {
-  const res = await fetch(`http://localhost:3000/api/watch?video_id=${video_id}`)
+Post.getInitialProps = async function ({ query: { videoId } }) {
+  const res = await fetch(`http://localhost:3000/api/watch?video_id=${videoId}`)
   const response = await res.json()
 
-  return response;
+  return response
 }
 
 export default Post

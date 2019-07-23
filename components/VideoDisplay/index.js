@@ -1,3 +1,3 @@
-import VideoDisplay from './VideoDisplay';
+import VideoDisplay from './VideoDisplay'
 
-export default VideoDisplay;
+export default VideoDisplay
