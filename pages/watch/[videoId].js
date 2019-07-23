@@ -41,7 +41,7 @@ const Post = ({ name, embed, statusCode }) => {
         <VideoName>{name}</VideoName>
       </div>
 
-      <h1>This is some text for ben gawsh darnit woman</h1>
+      <h1>This is some text for Ben gawsh darnit woman.</h1>
     </Page>
   )
 }
