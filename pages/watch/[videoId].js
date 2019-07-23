@@ -9,22 +9,22 @@ const Page = styled.div`
   grid-auto-flow: row;
   grid-template-columns: 3fr 1fr;
   grid-template-rows: 1fr;
-  grid-gap: ${({ theme }) => theme.spacing.double };
-  padding: ${({ theme }) => theme.spacing.double };
+  grid-gap: ${({ theme }) => theme.spacing.double};
+  padding: ${({ theme }) => theme.spacing.double};
 
   @media (max-width: 1023px) {
     grid-template-columns: 1fr;
+    padding: 0;
   } 
 `
 
 const VideoName = styled.h1`
-    font-size: ${({ theme }) => theme.spacing.double}
+  font-size: 2.5rem;
+  font-weight: bold;
 `
 
 const StyledVideoDisplayDiv = styled.div`
-    position: relative;
-    padding-top: calc(9/16 * 100%);
-    padding-bottom: ${({ theme }) => theme.spacing.double };
+  padding-bottom: ${({ theme }) => theme.spacing.double};
 `
 
 const Post = ({ name, embed, statusCode }) => {
@@ -33,17 +33,18 @@ const Post = ({ name, embed, statusCode }) => {
   }
 
   return (
-  <Page>
-    <div>
-      <StyledVideoDisplayDiv>
-        <VideoDisplay source={embed} />
-      </StyledVideoDisplayDiv>
-      <VideoName>{name}</VideoName>
-    </div>
+    <Page>
+      <div>
+        <StyledVideoDisplayDiv>
+          <VideoDisplay source={embed} />
+        </StyledVideoDisplayDiv>
+        <VideoName>{name}</VideoName>
+      </div>
 
-    <h1>This is some text for ben gawsh darnit woman</h1>
-  </Page>
-)}
+      <h1>This is some text for ben gawsh darnit woman</h1>
+    </Page>
+  )
+}
 
 Post.getInitialProps = async function ({ query: { videoId } }) {
   const res = await fetch(`http://localhost:3000/api/watch?videoId=${videoId}`)
@@ -52,7 +53,7 @@ Post.getInitialProps = async function ({ query: { videoId } }) {
   if (statusCode !== 200) return { statusCode }
 
   const response = await res.json()
-  return { statusCode: 200, ... response }
+  return { statusCode: 200, ...response }
 }
 
 export default Post
