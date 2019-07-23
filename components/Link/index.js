@@ -1,5 +1,5 @@
-import Link from './Link';
+import Link from './Link'
 import NavigationLink from './NavigationLink'
 
-export default Link;
-export { NavigationLink };
+export default Link
+export { NavigationLink }
