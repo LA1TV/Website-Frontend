@@ -9,8 +9,24 @@ const StyledIframe = styled.iframe`
   left: 0;
 `
 
+const StyledVideoDisplayDiv = styled.div`
+    position: relative;
+    padding-bottom: calc(calc(9/16 * 100%));
+`
+
 const VideoDisplay = ({ className, source }) => (
-  <StyledIframe className={className} src={source} frameBorder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen showHeading="0" flush="1" disableFullScreen="0"></StyledIframe>
+  <StyledVideoDisplayDiv>
+    <StyledIframe
+      className={className}
+      src={source}
+      frameBorder="0"
+      allowfullscreen
+      webkitallowfullscreen
+      mozallowfullscreen
+      showHeading="0"
+      flush="1"
+      disableFullScreen="0" />
+  </StyledVideoDisplayDiv>
 );
-  
+
 export default VideoDisplay;
