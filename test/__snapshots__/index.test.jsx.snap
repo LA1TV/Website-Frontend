@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`index should be able to render 1`] = `
+<Index>
+  <div>
+    <p>
+      Hello Next.js
+    </p>
+  </div>
+</Index>
+`;
