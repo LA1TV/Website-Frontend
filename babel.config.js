@@ -18,6 +18,7 @@ const plugins = [
       alias: {
         components: './components',
         pages: './pages',
+        tooling: './tooling',
         utilities: './utilities'
       }
     }
