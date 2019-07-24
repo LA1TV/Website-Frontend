@@ -4,11 +4,13 @@
   "description": "New website frontend written in Node",
   "main": "index.js",
   "scripts": {
+    "coveralls": "echo 'coveralls coming soon'",
     "dev": "next",
     "build": "next build",
     "lint": "eslint ./",
     "jest": "jest --coverage",
-    "start": "next start"
+    "start": "next start",
+    "test": "yarn lint"
   },
   "repository": {
     "type": "git",
