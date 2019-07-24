@@ -1,0 +1,12 @@
+os:
+  - linux
+language: node_js
+node_js:
+  - 'lts/*'
+cache: 
+  yarn: true
+install: yarn
+script:
+  - yarn test
+  - yarn build
+  - yarn coveralls
