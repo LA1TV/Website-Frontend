@@ -8,7 +8,8 @@
     "build": "next build",
     "lint": "eslint ./",
     "jest": "jest --coverage",
-    "start": "next start"
+    "start": "next start",
+    "test": "yarn lint"
   },
   "repository": {
     "type": "git",
