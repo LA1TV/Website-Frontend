@@ -1,9 +1,9 @@
 import React from 'react'
-import { mount } from 'enzyme'
+import { shallow } from 'enzyme'
 import toJson from 'enzyme-to-json'
 
 const render = (Component, props = {}) => {
-  return mount(<Component {...props} />)
+  return shallow(<Component {...props} />)
 }
 
 const renderToJson = (Component, props) => {
