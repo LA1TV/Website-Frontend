@@ -36,4 +36,4 @@ Once we have detached the audience from the old frontend, we can then remove tha
 
 ## Post frontend migration
 
-The frontend will now be isolated from the rest of the codebase, allowing LA1TV to actively start developing the frontend to suit their wants an needs rather than face the monolith that was the old website. The frontend can be built independantly, using the latest in web design practises giving skills to members that they would not of been able to gain on the old stack. It can also be built simpler, having a much lower barrier to entry than the old php site.
+The frontend will now be isolated from the rest of the codebase, allowing LA1TV to actively start developing the frontend to suit their wants an needs rather than face the monolith that was the old website. The frontend can be built independently, using the latest in web design practises giving skills to members that they would not of been able to gain on the old stack. It can also be built simpler, having a much lower barrier to entry than the old php site.
