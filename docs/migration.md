@@ -24,7 +24,7 @@ In order to effectively develop the front end to a point where we are confident 
 
 ## Step 3
 
-Once the new www frontend has been developed to a point where LA1TV are confident in its abilities, we can then deploy it over the top of the current www frontent, removing the old service from the view of the audience.
+Once the new www frontend has been developed to a point where LA1TV is confident in its abilities, we can then deploy it over the top of the current www frontend, removing the old service from the view of the audience.
 
 ![overwrite the www frontend with the new www frontend](./images/migration/step_3.png)
 
