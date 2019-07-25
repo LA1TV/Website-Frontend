@@ -30,7 +30,7 @@ Once the new www frontend has been developed to a point where LA1TV is confident
 
 ## Step 4
 
-Once we have detached the audience from the old frontend, we can then remove that code from the backend service. removing a large part of the comlpexity that currently exsists on the current website.
+Once we have detached the audience from the old frontend, we can then remove that code from the backend service. removing a large part of the complexity exists on the current website.
 
 ![safely start removing front end code from api](./images/migration/step_4.png)
 
