@@ -4,7 +4,7 @@ The current LA1TV website offering is a monolith application, there is no archec
 
 The current site, however, is the most featureful out of any other student television station's and in its abilities rivals any broadcasting company's technological abilities except that of major broadcasters such as the BBC. This functionality is wanted to be maintained and improved upon with other features such as live blogging; reactions; more share features and improved onward journeys.
 
-To achieve this without any major regression in capabilities a soloution must be found to breaking down the monolith, something that has proved itself to be hard to achieve. Outlined below is a series of steps that could effectively decouple the frontend of the LA1TV website safely with no regression in capabilities on the backend, and only minor front end loses of functionality.
+To achieve this without any major regression in capabilities a solution must be found to breaking down the monolith, something that has proved itself to be hard to achieve. Outlined below is a series of steps that could effectively decouple the frontend of the LA1TV website safely with no regression in capabilities on the backend, and only minor front end lose of functionality.
 
 ## Currently in the LA1TV Website
 
