@@ -1,6 +1,6 @@
 # Migration Plan
 
-The current LA1TV website offering is a monolith application, there is no archectural seperation of concerns between the components that form the website. This has lead to a situation where the website has been poorly maintained by the membership over the last 3 years and it has slowly become more and more of a risk to the continued operation of LA1TV.
+The current LA1TV website offering is a monolith application, there is no architectural separation of concerns between the components that form the website. This has lead to a situation where the website has been poorly maintained by the membership over the last 3 years and it has slowly become more and more of a risk to the continued operation of LA1TV.
 
 The current site, however, is the most featureful out of any other student television station's and in its abilities rivals any broadcasting company's technological abilities except that of major broadcasters such as the BBC. This functionality is wanted to be maintained and improved upon with other features such as live blogging; reactions; more share features and improved onward journeys.
 
