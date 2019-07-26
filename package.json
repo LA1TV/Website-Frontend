@@ -5,12 +5,12 @@
   "main": "index.js",
   "scripts": {
     "coveralls": "echo 'coveralls coming soon'",
-    "dev": "next",
     "build": "next build",
     "lint": "eslint ./",
     "jest": "jest --coverage",
-    "start": "next start",
-    "test": "yarn lint"
+    "test": "yarn lint",
+    "dev": "node server.js",
+    "start": "NODE_ENV=production node server.js"
   },
   "repository": {
     "type": "git",
