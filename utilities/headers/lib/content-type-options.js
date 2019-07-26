@@ -1,3 +1,3 @@
-const hstsHeader = ['X-Content-Type-Options', 'nosniff']
+const contentTypeOptions = ['X-Content-Type-Options', 'nosniff']
 
-module.exports = hstsHeader
+module.exports = contentTypeOptions

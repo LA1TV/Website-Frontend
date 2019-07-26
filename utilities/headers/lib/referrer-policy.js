@@ -1,3 +1,3 @@
-const hstsHeader = ['Referrer-Policy', 'no-referrer']
+const referrerPolicyHeader = ['Referrer-Policy', 'no-referrer']
 
-module.exports = hstsHeader
+module.exports = referrerPolicyHeader

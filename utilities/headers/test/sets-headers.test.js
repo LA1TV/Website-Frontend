@@ -14,6 +14,7 @@ test('sets headers', () => {
   expect(mockRes.setHeader).toHaveBeenCalledWith('Referrer-Policy', 'no-referrer')
   expect(mockRes.setHeader).toHaveBeenCalledWith('Feature-Policy', expectedFeaturePolicy)
   expect(mockRes.setHeader).toHaveBeenCalledWith('Content-Security-Policy', expectedContentSecurityPolicy)
+  expect(mockRes.setHeader).toHaveBeenCalledWith('X-XSS-Protection', '1; mode=block')
 })
 
 test('sets live headers', () => {
