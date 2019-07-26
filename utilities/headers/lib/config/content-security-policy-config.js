@@ -1,4 +1,4 @@
-const liveOnlyHeading = () => process.env.LIVE
+const liveOnlyHeading = () => process.env.UPGRADE_INSECURE_REQUESTS
   ? [
     {
       name: 'upgrade-insecure-requests'
