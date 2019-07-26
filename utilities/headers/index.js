@@ -5,13 +5,13 @@ const featurePolicy = require('./lib/feature-policy')
 const contentSecurityPolicy = require('./lib/content-security-policy')
 
 const setHeaders = (res) => {
-  if (process.env.LIVE === 'true') {
+  if (process.env.LIVE) {
     res.setHeader(...strictTransportSecurity)
   }
   res.setHeader(...contentTypeOptions)
   res.setHeader(...referrerPolicy)
   res.setHeader(...featurePolicy)
-  res.setHeader(...contentSecurityPolicy)
+  res.setHeader(...contentSecurityPolicy())
 }
 
-module.exports = { setHeaders }
+module.exports = setHeaders
