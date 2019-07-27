@@ -1,11 +1,11 @@
 import { renderToJson } from 'tooling/jest/render'
-import Index from 'pages/index.js'
+import About from 'pages/about.js'
 
 test('should be able to render', () => {
-  expect(renderToJson(Index)).toMatchInlineSnapshot(`
+  expect(renderToJson(About)).toMatchInlineSnapshot(`
     <div>
       <p>
-        Hello Next.js
+        This is the aboot page
       </p>
     </div>
   `)
