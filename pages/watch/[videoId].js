@@ -27,24 +27,18 @@ const StyledVideoDisplayDiv = styled.div`
   padding-bottom: ${({ theme }) => theme.spacing.double};
 `
 
-const Post = ({ name, embed, statusCode }) => {
-  if (statusCode !== 200) {
-    return <Error statusCode={statusCode} />
-  }
+const Post = ({ name, embed, statusCode }) => statusCode !== 200
+  ? <Error statusCode={statusCode} />
+  : <Page>
+    <div>
+      <StyledVideoDisplayDiv>
+        <VideoDisplay source={embed} />
+      </StyledVideoDisplayDiv>
+      <VideoName>{name}</VideoName>
+    </div>
 
-  return (
-    <Page>
-      <div>
-        <StyledVideoDisplayDiv>
-          <VideoDisplay source={embed} />
-        </StyledVideoDisplayDiv>
-        <VideoName>{name}</VideoName>
-      </div>
-
-      <h1>This is some text for Ben gawsh darnit woman.</h1>
-    </Page>
-  )
-}
+    <h1>This is some text for Ben gawsh darnit woman.</h1>
+  </Page>
 
 Post.getInitialProps = async function ({ query: { videoId } }) {
   const res = await fetch(`http://localhost:3000/api/watch?videoId=${videoId}`)
