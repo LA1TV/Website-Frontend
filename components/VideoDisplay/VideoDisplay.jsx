@@ -10,8 +10,8 @@ const StyledIframe = styled.iframe`
 `
 
 const StyledVideoDisplayDiv = styled.div`
-    position: relative;
-    padding-bottom: calc(calc(9/16 * 100%));
+  position: relative;
+  padding-bottom: calc(calc(9/16 * 100%));
 `
 
 const VideoDisplay = ({ className, source }) => (

@@ -4,18 +4,18 @@ import { NavigationLink } from '../Link'
 import React from 'react'
 
 const StyledNav = styled.nav`
-    width: 100%;
-    display: flex;
-    background-color: ${({ theme }) => theme.color.background};
-    border-bottom: 2px solid ${({ theme }) => theme.color.accent};
+  width: 100%;
+  display: flex;
+  background-color: ${({ theme }) => theme.color.background};
+  border-bottom: 2px solid ${({ theme }) => theme.color.accent};
 `
 
 const StyledEmbed = styled.img`
-    height: 100%;
-    align-self: flex-start;
+  height: 100%;
+  align-self: flex-start;
 `
 const StyledOrderedList = styled.ol`
-    margin-left: auto;
+  margin-left: auto;
 `
 
 const Navigation = ({ children }) => (
