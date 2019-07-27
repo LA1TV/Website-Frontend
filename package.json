@@ -6,7 +6,7 @@
   "scripts": {
     "coveralls": "echo 'coveralls coming soon'",
     "build": "next build",
-    "lint": "eslint ./",
+    "lint": "eslint ./ --ext js,jsx",
     "jest": "jest --coverage",
     "test": "yarn lint",
     "dev": "node server.js",

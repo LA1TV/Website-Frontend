@@ -1,10 +1,10 @@
-import Link from './Link';
-import styled from 'styled-components';
-import react from 'react';
+import Link from './Link'
+import styled from 'styled-components'
+import React from 'react'
 
 const StyledLink = styled(Link)`
     text-decoration: none;
-    padding: ${({ theme }) => theme.spacing.double };
+    padding: ${({ theme }) => theme.spacing.double};
     display: inline-block;
     font-weight: bold;
     text-transform: uppercase;
@@ -25,11 +25,11 @@ const StyledListItem = styled.li`
 `
 
 const NavigationLink = ({ children, className, href }) => (
-    <StyledListItem>
-        <StyledLink href={href}>
-            {children}
-        </StyledLink>
-    </StyledListItem>
-);
+  <StyledListItem>
+    <StyledLink href={href}>
+      {children}
+    </StyledLink>
+  </StyledListItem>
+)
 
-export default NavigationLink;
+export default NavigationLink
