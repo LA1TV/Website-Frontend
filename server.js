@@ -1,5 +1,5 @@
 const { createServer } = require('http')
-const { parse } = require('url')
+const { parse } = require('url') /* eslint-disable-line node/no-deprecated-api */
 const next = require('next')
 const setHeaders = require('./utilities/headers')
 
@@ -9,8 +9,7 @@ const app = next({ dev })
 
 app.prepare().then(() => {
   createServer((req, res) => {
-    const parsedUrl = parse(req.url, true)
-    const { pathname, query } = parsedUrl
+    const { pathname, query } = parse(req.url, true)
 
     setHeaders(res)
 
