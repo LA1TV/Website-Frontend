@@ -1,6 +1,7 @@
 const ignorePaths = [
   'babel.config.js',
   'jest.config.js',
+  'coverage',
   'node_modules',
   '.next'
 ]
