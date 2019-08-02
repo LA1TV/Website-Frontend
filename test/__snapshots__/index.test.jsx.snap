@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`should be able to render 1`] = `
-<div>
-  <p>
-    Hello Next.js
-  </p>
-</div>
-`;

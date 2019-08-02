@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import styled from 'styled-components'
 
 const StyledIframe = styled.iframe`
@@ -10,8 +10,8 @@ const StyledIframe = styled.iframe`
 `
 
 const StyledVideoDisplayDiv = styled.div`
-    position: relative;
-    padding-bottom: calc(calc(9/16 * 100%));
+  position: relative;
+  padding-bottom: calc(calc(9/16 * 100%));
 `
 
 const VideoDisplay = ({ className, source }) => (
@@ -27,6 +27,6 @@ const VideoDisplay = ({ className, source }) => (
       flush="1"
       disableFullScreen="0" />
   </StyledVideoDisplayDiv>
-);
+)
 
-export default VideoDisplay;
+export default VideoDisplay
