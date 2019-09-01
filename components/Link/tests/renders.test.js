@@ -3,9 +3,7 @@ import Link, { NavigationLink } from '..'
 
 test('renders', () => {
   expect(renderToJson(Link)).toMatchInlineSnapshot(`
-    <Link
-      prefetch={true}
-    >
+    <Link prefetch={true}>
       <Link__StyledLink />
     </Link>
   `)

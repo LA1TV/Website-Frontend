@@ -20,7 +20,7 @@ const VideoDisplay = ({ className, source }) => (
       className={className}
       src={source}
       allowFullScreen
-      frameBorder="0" 
+      frameBorder="0"
     />
   </StyledVideoDisplayDiv>
 )

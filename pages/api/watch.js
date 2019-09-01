@@ -1,4 +1,4 @@
-import api_call from './api_call'
+import apiCall from './api_call'
 
 const parseResponse = ({ mediaItem: { name, embed: { iframeUrl } } }) => ({
   name,
@@ -8,13 +8,13 @@ const parseResponse = ({ mediaItem: { name, embed: { iframeUrl } } }) => ({
 const handle = async ({ query: { videoId } }, res) => {
   const url = `mediaItems/${videoId}`
 
-  await api_call(url, res).then((data) => {
+  await apiCall(url, res).then((data) => {
     const parsedResponse = parseResponse(data)
     res.send(parsedResponse)
   }).catch((err) => {
     console.log(err)
     res.status(404).send(err)
-  })  
+  })
 }
 
 export default handle
