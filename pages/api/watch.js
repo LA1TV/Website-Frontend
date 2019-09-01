@@ -8,7 +8,7 @@ const parseResponse = ({ mediaItem: { name, embed: { iframeUrl } } }) => ({
 const handle = async ({ query: { videoId } }, res) => {
   const url = `mediaItems/${videoId}`
 
-  await api_call(url).then((data) => {
+  await api_call(url, res).then((data) => {
     const parsedResponse = parseResponse(data)
     res.send(parsedResponse)
   }).catch((err) => {
