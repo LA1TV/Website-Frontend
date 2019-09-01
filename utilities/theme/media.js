@@ -1,10 +1,17 @@
 import { css } from 'styled-components'
-import theme from './theme'
 
-export default Object.keys(theme.spacing).reduce((acc, label) => {
+const sizes = {
+  mobile: 768,
+  tablet: 992,
+  laptop: 1444,
+  desktop: 1920
+}
+
+export default Object.keys(sizes).reduce((acc, label) => {
     acc[label] = (...args) => css`
-      @media (max-width: ${theme.spacing[label]}px) {
+      @media (max-width: ${sizes[label]}px) {
         ${css(...args)}
       }
     `
+    return acc
 }, {})
