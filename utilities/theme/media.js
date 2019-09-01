@@ -3,7 +3,7 @@ import theme from './theme'
 
 export default Object.keys(theme.spacing).reduce((acc, label) => {
     acc[label] = (...args) => css`
-      @media (max-width: ${sizes[label]}px) {
+      @media (max-width: ${theme.spacing[label]}px) {
         ${css(...args)}
       }
     `
