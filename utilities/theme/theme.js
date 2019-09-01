@@ -12,6 +12,12 @@ const theme = {
     background: '#1e1e1e',
     primary: '#f9f9f9',
     accent: '#bb0022'
+  },
+  sizes: {
+    mobile: 768,
+    tablet: 992,
+    laptop: 1444,
+    desktop: 1920
   }
 }
 

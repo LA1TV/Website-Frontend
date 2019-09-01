@@ -6,6 +6,7 @@
 
 import theme from './theme'
 import pxToRem from './px-to-rem'
+import media from './media'
 
 export default theme
-export { pxToRem }
+export { pxToRem, media }
