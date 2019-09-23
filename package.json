@@ -30,9 +30,9 @@
   },
   "homepage": "https://github.com/LA1TV/Website-Frontend#readme",
   "dependencies": {
-    "dotenv": "^8.0.0",
+    "dotenv": "^8.1.0",
     "isomorphic-unfetch": "^3.0.0",
-    "next": "^9.0.3",
+    "next": "^9.0.6",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "styled-components": "^4.3.2"
@@ -42,15 +42,15 @@
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
     "enzyme-to-json": "^3.4.0",
-    "eslint": "^6.1.0",
-    "eslint-config-standard": "^13.0.1",
+    "eslint": "^6.4.0",
+    "eslint-config-standard": "^14.1.0",
     "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-jest": "^22.15.1",
-    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-jest": "^22.17.0",
+    "eslint-plugin-node": "^10.0.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-react": "^7.14.3",
-    "eslint-plugin-standard": "^4.0.0",
-    "jest": "^24.8.0",
+    "eslint-plugin-standard": "^4.0.1",
+    "jest": "^24.9.0",
     "prettier": "^1.18.2"
   }
 }
