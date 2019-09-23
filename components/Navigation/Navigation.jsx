@@ -31,7 +31,6 @@ const Navigation = ({ children }) => (
         <NavigationLink href="/watch/328">Shows</NavigationLink>
         <NavigationLink href="/playlists">Playlists</NavigationLink>
         <NavigationLink href="/live">Livestreams</NavigationLink>
-        <NavigationLink href="https://confluence.la1tv.co.uk/">Wiki</NavigationLink>
         <NavigationLink href="/contact">Contact</NavigationLink>
       </StyledOrderedList>
     </StyledNav>

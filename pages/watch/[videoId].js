@@ -36,8 +36,6 @@ const Post = ({ name, embed, statusCode }) => statusCode !== 200
       </StyledVideoDisplayDiv>
       <VideoName>{name}</VideoName>
     </div>
-
-    <h1>This is some text for Ben gawsh darnit woman.</h1>
   </Page>
 
 Post.getInitialProps = async ({ query: { videoId } }) => {
