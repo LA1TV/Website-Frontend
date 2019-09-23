@@ -39,11 +39,6 @@ test('renders', () => {
             Livestreams
           </NavigationLink>
           <NavigationLink
-            href="https://confluence.la1tv.co.uk/"
-          >
-            Wiki
-          </NavigationLink>
-          <NavigationLink
             href="/contact"
           >
             Contact

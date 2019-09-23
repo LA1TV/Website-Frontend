@@ -4,13 +4,14 @@
   "description": "New website frontend written in Node",
   "main": "index.js",
   "scripts": {
-    "clean": "git clean -xfdq --exclude=./config.json",
-    "coveralls": "echo 'coveralls coming soon'",
-    "build": "next build",
-    "lint": "eslint ./ --ext js,jsx",
-    "jest": "jest --coverage",
-    "test": "yarn lint && jest",
     "dev": "next dev",
+    "jest": "yarn test:coverage --watch",
+    "clean": "git clean -xfdq --exclude=config.json",
+    "build": "next build",
+    "test": "yarn test:lint && yarn test:coverage",
+    "test:lint": "eslint ./ --ext js,jsx",
+    "test:coverage": "jest --coverage",
+    "reportCoverage": "echo 'coveralls coming soon'",
     "start": "NODE_ENV=production next start"
   },
   "repository": {

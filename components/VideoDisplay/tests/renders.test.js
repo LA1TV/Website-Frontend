@@ -5,8 +5,11 @@ test('renders', () => {
   expect(renderToJson(VideoDisplay)).toMatchInlineSnapshot(`
     <VideoDisplay__StyledVideoDisplayDiv>
       <VideoDisplay__StyledIframe
-        allowFullScreen={true}
-        frameBorder="0"
+        allowfullscreen={true}
+        frameborder="0"
+        mozallowfullscreen={true}
+        src="undefined?flush=0&hideBottomBar=1&showHeading=0"
+        webkitallowfullscreen={true}
       />
     </VideoDisplay__StyledVideoDisplayDiv>
   `)
