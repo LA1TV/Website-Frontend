@@ -5,12 +5,12 @@
   "main": "index.js",
   "scripts": {
     "dev": "next dev",
-    "jest": "yarn test:coverage --watch",
+    "jest": "yarn test:coverage --coverage --watch",
     "clean": "git clean -xfdq --exclude=config.json",
     "build": "next build",
     "test": "yarn test:lint && yarn test:coverage",
     "test:lint": "eslint ./ --ext js,jsx",
-    "test:coverage": "jest --coverage",
+    "test:coverage": "jest",
     "reportCoverage": "echo 'coveralls coming soon'",
     "start": "NODE_ENV=production next start"
   },
