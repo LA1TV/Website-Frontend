@@ -9,11 +9,8 @@
     "lint": "eslint ./ --ext js,jsx",
     "jest": "jest --coverage",
     "test": "yarn lint && jest",
-    "dev": "node server.js",
-    "start": "NODE_ENV=production node server.js",
-    "setEnv": "node scripts/setup-env.js",
-    "predev": "yarn setEnv",
-    "prestart": "yarn setEnv"
+    "dev": "next dev",
+    "start": "NODE_ENV=production next start"
   },
   "repository": {
     "type": "git",
