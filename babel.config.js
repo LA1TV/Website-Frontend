@@ -17,6 +17,7 @@ const plugins = [
       root: ['./'],
       alias: {
         components: './components',
+        layouts: './layouts',
         pages: './pages',
         tooling: './tooling',
         utilities: './utilities'
