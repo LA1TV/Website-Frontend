@@ -17,16 +17,18 @@ const StyledVideoDisplayDiv = styled.div`
 const Post = ({ name, description, embed, statusCode }) => {
   if (statusCode !== 200) return <Error statusCode={statusCode} />
 
-  const left = (
+  const left =
     <>
       <StyledVideoDisplayDiv>
         <VideoDisplay source={embed} />
       </StyledVideoDisplayDiv>
-      <VideoName>{name}</VideoName>
     </>
-  )
 
-  const right = <>{description}</>
+  const right =
+    <>
+      <VideoName>{name}</VideoName>
+      {description}
+    </>
 
   return <Sidebar left={left} right={right} />
 }

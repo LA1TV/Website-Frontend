@@ -29,9 +29,6 @@ const Navigation = ({ children }) => (
       <StyledOrderedList>
         <NavigationLink href="/">Home</NavigationLink>
         <NavigationLink href="/watch/328">Shows</NavigationLink>
-        <NavigationLink href="/playlists">Playlists</NavigationLink>
-        <NavigationLink href="/live">Livestreams</NavigationLink>
-        <NavigationLink href="/contact">Contact</NavigationLink>
       </StyledOrderedList>
     </StyledNav>
 

@@ -7,11 +7,11 @@ const DeafultSidebar = styled.div`
   > * {
     display: flex;
     flex-wrap: wrap;
-    margin: calc(16px / 2 * -1);
+    margin: calc(${({ theme }) => theme.spacing.base} / 2 * -1);
   }
 
   > * > * {
-    margin: calc(16px / 2);
+    margin: calc(${({ theme }) => theme.spacing.base} / 2);
     flex-basis: ${({ sidebarWidth }) => sidebarWidth};
     flex-grow: 1;
   }
@@ -19,7 +19,7 @@ const DeafultSidebar = styled.div`
   > * > ${({ sidebarOnRight }) => sidebarOnRight ? ':first-child' : ':last-child'} {
     flex-basis: 0;
     flex-grow: 999;
-    min-width: calc(${({ minWidth }) => minWidth} - 16px);
+    min-width: calc(${({ minWidth }) => minWidth} - ${({ theme }) => theme.spacing.base});
   }
 `
 
