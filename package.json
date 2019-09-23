@@ -8,7 +8,7 @@
     "build": "next build",
     "lint": "eslint ./ --ext js,jsx",
     "jest": "jest --coverage",
-    "test": "yarn lint",
+    "test": "yarn lint && jest",
     "dev": "node server.js",
     "start": "NODE_ENV=production node server.js"
   },

@@ -1,7 +1,7 @@
-import { renderToJson } from "tooling/jest/render";
-import VideoDisplay from "..";
+import { renderToJson } from 'tooling/jest/render'
+import VideoDisplay from '..'
 
-test("renders", () => {
+test('renders', () => {
   expect(renderToJson(VideoDisplay)).toMatchInlineSnapshot(`
     <VideoDisplay__StyledVideoDisplayDiv>
       <VideoDisplay__StyledIframe
@@ -9,5 +9,5 @@ test("renders", () => {
         frameBorder="0"
       />
     </VideoDisplay__StyledVideoDisplayDiv>
-  `);
-});
+  `)
+})
