@@ -8,7 +8,8 @@ test('makes call to la1tv api', () => {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
-      'X-Api-Key': undefined }
+      'X-Api-Key': expect.any(String)
+    }
   }
   la1tvFetcher({ url: 'someUrl' })
   expect(fetch).toHaveBeenCalledWith('https://www.la1tv.co.uk/api/v1/someUrl', expectedRequest)

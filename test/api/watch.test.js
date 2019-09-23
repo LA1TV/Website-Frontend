@@ -1,18 +1,25 @@
-import fetch from 'isomorphic-unfetch'
+import { la1tvFetcher } from 'utilities/api'
+import watchHandler from '../../pages/api/watch'
 
-jest.mock('isomorphic-unfetch')
+jest.mock('utilities/api')
 
-test('should call the la1tv url', () => {
-  fetch.mockReturnValue('mock response')
-  const expectedURL = 'https://www.la1tv.co.uk/api/v1/mediaItems/someVideoId'
-  const expectedOptions = {
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json',
-      'X-Api-Key': expect.any(String)
-    }
+test('should return some data using the la1tvFetcher', async () => {
+  la1tvFetcher.mockResolvedValueOnce({
+    body: 'someData',
+    statusCode: 200
+  })
+
+  const mockEnd = jest.fn()
+  const mockStatus = jest.fn().mockReturnValue({
+    end: mockEnd
+  })
+
+  const mockResponse = {
+    status: mockStatus
   }
 
-  expect(fetch).toHaveBeenCalledTimes(1)
-  expect(fetch).toHaveBeenCalledWith(expectedURL, expectedOptions)
+  await watchHandler({ query: { videoId: 'someVideoId' } }, mockResponse)
+
+  expect(mockStatus).toHaveBeenCalledWith(200)
+  expect(mockEnd).toHaveBeenCalledWith('someData')
 })
