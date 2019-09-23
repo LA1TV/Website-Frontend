@@ -18,7 +18,7 @@ module.exports = {
     }
   },
   clearMocks: true,
-  setupFiles: ['<rootDir>/tooling/jest/setup.js'],
+  setupFiles: ['<rootDir>/tooling/jest/setup.js', 'dotenv/config'],
   snapshotSerializers: ['enzyme-to-json/serializer'],
   testMatch: ['**/?(*.)test.js?(x)'],
   testPathIgnorePatterns: [...ignorePaths],

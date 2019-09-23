@@ -1,4 +1,4 @@
-import apiCall from './api_call'
+import { la1tvFetcher } from 'utilities/api'
 
 const parseResponse = ({ mediaItem: { name, embed: { iframeUrl } } }) => ({
   name,
@@ -8,13 +8,9 @@ const parseResponse = ({ mediaItem: { name, embed: { iframeUrl } } }) => ({
 const handle = async ({ query: { videoId } }, res) => {
   const url = `mediaItems/${videoId}`
 
-  await apiCall(url, res).then((data) => {
-    const parsedResponse = parseResponse(data)
-    res.send(parsedResponse)
-  }).catch((err) => {
-    console.log(err)
-    res.status(404).send(err)
-  })
+  const { statusCode, body } = await la1tvFetcher({ url, parser: parseResponse })
+
+  res.status(statusCode).end(body)
 }
 
 export default handle
