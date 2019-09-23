@@ -40,8 +40,9 @@ const Post = ({ name, embed, statusCode }) => statusCode !== 200
     <h1>This is some text for Ben gawsh darnit woman.</h1>
   </Page>
 
-Post.getInitialProps = async function ({ query: { videoId } }) {
+Post.getInitialProps = async ({ query: { videoId } }) => {
   const res = await fetch(`http://localhost:3000/api/watch?videoId=${videoId}`)
+
   const statusCode = res.status
 
   if (statusCode !== 200) return { statusCode }

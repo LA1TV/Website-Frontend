@@ -10,7 +10,7 @@ const handle = async ({ query: { videoId } }, res) => {
 
   const { statusCode, body } = await la1tvFetcher({ url, parser: parseResponse })
 
-  res.status(statusCode).end(body)
+  res.status(statusCode).end(JSON.stringify(body))
 }
 
 export default handle

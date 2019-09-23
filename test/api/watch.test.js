@@ -5,7 +5,7 @@ jest.mock('utilities/api')
 
 test('should return some data using the la1tvFetcher', async () => {
   la1tvFetcher.mockResolvedValueOnce({
-    body: 'someData',
+    body: { someObject: 'someData' },
     statusCode: 200
   })
 
@@ -21,5 +21,5 @@ test('should return some data using the la1tvFetcher', async () => {
   await watchHandler({ query: { videoId: 'someVideoId' } }, mockResponse)
 
   expect(mockStatus).toHaveBeenCalledWith(200)
-  expect(mockEnd).toHaveBeenCalledWith('someData')
+  expect(mockEnd).toHaveBeenCalledWith(JSON.stringify({ someObject: 'someData' }))
 })
