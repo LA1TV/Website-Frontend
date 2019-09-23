@@ -5,12 +5,12 @@ const StyledStack = styled.div`
   > * {
     margin-top: 0;
     margin-bottom: 0;
-  } 
+} 
 
   ${({ theme, recursive }) => recursive
     ? `* + * {margin-top: ${theme.spacing.base};}`
     : `> * + * {margin-top: ${theme.spacing.base};}`
-  }
+}
 `
 
 const Stack = ({ children, recursive }) => (

@@ -12,18 +12,22 @@ const DeafultSidebar = styled.div`
 
   > * > * {
     margin: calc(16px / 2);
+    flex-basis: ${({ sidebarWidth }) => sidebarWidth};
     flex-grow: 1;
   }
 
   > * > ${({ sidebarOnRight }) => sidebarOnRight ? ':first-child' : ':last-child'} {
     flex-basis: 0;
     flex-grow: 999;
-    min-width: calc(50% - 16px);
+    min-width: calc(${({ minWidth }) => minWidth} - 16px);
   }
 `
 
-const Sidebar = ({ left, right, sidebarOnRight }) => (
-  <DeafultSidebar sidebarOnRight={sidebarOnRight}>
+const Sidebar = ({ left, right, sidebarOnRight, minWidth = '30%', sidebarWidth = '40rem' }) => (
+  <DeafultSidebar
+    sidebarOnRight={sidebarOnRight}
+    minWidth={minWidth}
+    sidebarWidth={sidebarWidth}>
     <div>
       <div>{left}</div>
       <div>{right}</div>
