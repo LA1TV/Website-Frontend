@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 
-
 const StyledHeading = ({ type }) => styled(type)`
   color: ${({ theme }) => theme.color.primary};
   font-size: 2.5rem;

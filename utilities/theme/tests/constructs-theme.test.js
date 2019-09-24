@@ -1,11 +1,12 @@
-import theme from '../theme'
+import theme from "../theme";
 
-test('16px goes to 1rem', () => {
+test("16px goes to 1rem", () => {
   expect(theme).toMatchInlineSnapshot(`
     Object {
       "color": Object {
         "accent": "#bb0022",
-        "background": "#1e1e1e",
+        "background": "#000000",
+        "navBackground": "#1e1e1e",
         "primary": "#f9f9f9",
       },
       "spacing": Object {
@@ -16,5 +17,5 @@ test('16px goes to 1rem', () => {
         "third": "0.25rem",
       },
     }
-  `)
-})
+  `);
+});
