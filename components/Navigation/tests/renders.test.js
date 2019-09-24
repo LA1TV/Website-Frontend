@@ -14,7 +14,9 @@ test('renders', () => {
         />
       </Head>
       <Navigation__StyledNav>
-        <Navigation__StyledCenter>
+        <Center
+          intrinsicCenter={true}
+        >
           <Navigation__StyledEmbed
             src="/static/images/logo.svg"
           />
@@ -30,7 +32,7 @@ test('renders', () => {
               Shows
             </NavigationLink>
           </Navigation__StyledOrderedList>
-        </Navigation__StyledCenter>
+        </Center>
       </Navigation__StyledNav>
       <Center />
     </Fragment>

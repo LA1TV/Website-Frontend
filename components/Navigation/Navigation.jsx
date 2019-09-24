@@ -18,10 +18,6 @@ const StyledOrderedList = styled.ol`
   margin-left: auto;
 `
 
-const StyledCenter = styled(Center)`
-  display: flex;
-`
-
 const Navigation = ({ children }) => (
   <>
     <Head>
@@ -29,13 +25,13 @@ const Navigation = ({ children }) => (
       <meta name="viewport" content="initial-scale=1.0, width=devide-width" />
     </Head>
     <StyledNav>
-      <StyledCenter>
+      <Center intrinsicCenter>
         <StyledEmbed src="/static/images/logo.svg"/>
         <StyledOrderedList>
           <NavigationLink href="/">Home</NavigationLink>
           <NavigationLink href="/watch/210">Shows</NavigationLink>
         </StyledOrderedList>
-      </StyledCenter>
+      </Center>
     </StyledNav>
     <Center>
       {children}

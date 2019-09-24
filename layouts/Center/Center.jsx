@@ -5,11 +5,19 @@ const DeafultCenter = styled.div`
   box-sizing: content-box;
   margin-left: auto;
   margin-right: auto;
-  max-width: 80rem;
+  max-width: ${({ maxWidth }) => maxWidth};
+  ${({ intrinsicCenter }) => intrinsicCenter
+    ? `
+      display:flex;
+      flex-direction: row;
+      align-items: center;
+    `
+    : ''
+  }
 `
 
-const Center = ({ className, children }) => (
-  <DeafultCenter className={className}>
+const Center = ({ children, intrinsicCenter = false, maxWidth = '80rem' }) => (
+  <DeafultCenter intrinsicCenter={intrinsicCenter} maxWidth={maxWidth}>
     {children}
   </DeafultCenter>
 )
