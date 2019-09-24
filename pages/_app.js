@@ -9,6 +9,9 @@ class AppWrapper extends App {
   render () {
     const GlobalCSS = createGlobalStyle`
       ${globalCss}
+      body {
+        background-color: ${({ theme }) => theme.color.background}
+      }
     `
     const { Component, pageProps } = this.props
     return (

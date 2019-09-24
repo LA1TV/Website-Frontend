@@ -8,6 +8,7 @@ import Error from 'next/error'
 const VideoName = styled.h1`
   font-size: 2.5rem;
   font-weight: bold;
+  color: ${({ theme }) => theme.color.primary}
 `
 
 const StyledVideoDisplayDiv = styled.div`

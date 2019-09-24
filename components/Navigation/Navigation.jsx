@@ -6,7 +6,7 @@ import React from 'react'
 const StyledNav = styled.nav`
   width: 100%;
   display: flex;
-  background-color: ${({ theme }) => theme.color.background};
+  background-color: ${({ theme }) => theme.color.navBackground};
   border-bottom: 2px solid ${({ theme }) => theme.color.accent};
 `
 
