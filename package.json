@@ -11,6 +11,7 @@
     "test": "yarn test:lint && yarn test:coverage",
     "test:lint": "eslint ./ --ext js,jsx",
     "test:coverage": "jest",
+    "pretest": "node scripts/pretest.js",
     "reportCoverage": "echo 'coveralls coming soon'",
     "start": "NODE_ENV=production next start"
   },
