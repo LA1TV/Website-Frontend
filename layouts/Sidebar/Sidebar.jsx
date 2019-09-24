@@ -2,7 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 
 const DeafultSidebar = styled.div`
-    overflow: hidden;
+  overflow: hidden;
+  width: 100%;
 
   > * {
     display: flex;

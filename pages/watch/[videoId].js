@@ -1,6 +1,7 @@
 import React from 'react'
 import fetch from 'isomorphic-unfetch'
 import Sidebar from 'layouts/Sidebar'
+import Center from 'layouts/Center'
 import VideoDisplay from 'components/VideoDisplay'
 import styled from 'styled-components'
 import Error from 'next/error'
@@ -11,18 +12,12 @@ const VideoName = styled.h1`
   color: ${({ theme }) => theme.color.primary}
 `
 
-const StyledVideoDisplayDiv = styled.div`
-  padding-bottom: ${({ theme }) => theme.spacing.double};
-`
-
 const Post = ({ name, description, embed, statusCode }) => {
   if (statusCode !== 200) return <Error statusCode={statusCode} />
 
   const left =
     <>
-      <StyledVideoDisplayDiv>
         <VideoDisplay source={embed} />
-      </StyledVideoDisplayDiv>
     </>
 
   const right =
@@ -31,7 +26,11 @@ const Post = ({ name, description, embed, statusCode }) => {
       {description}
     </>
 
-  return <Sidebar left={left} right={right} />
+  return (
+    <Center>
+      <Sidebar left={left} right={right} />
+    </Center>
+  )
 }
 
 Post.getInitialProps = async ({ query: { videoId } }) => {
