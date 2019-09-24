@@ -1,7 +1,7 @@
-import { renderToJson } from "tooling/jest/render";
-import Navigation from "..";
+import { renderToJson } from 'tooling/jest/render'
+import Navigation from '..'
 
-test("renders", () => {
+test('renders', () => {
   expect(renderToJson(Navigation)).toMatchInlineSnapshot(`
     <Fragment>
       <Head>
@@ -34,5 +34,5 @@ test("renders", () => {
       </Navigation__StyledNav>
       <Center />
     </Fragment>
-  `);
-});
+  `)
+})

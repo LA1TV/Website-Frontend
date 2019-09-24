@@ -1,6 +1,6 @@
-import theme from "../theme";
+import theme from '../theme'
 
-test("16px goes to 1rem", () => {
+test('16px goes to 1rem', () => {
   expect(theme).toMatchInlineSnapshot(`
     Object {
       "color": Object {
@@ -17,5 +17,5 @@ test("16px goes to 1rem", () => {
         "third": "0.25rem",
       },
     }
-  `);
-});
+  `)
+})
