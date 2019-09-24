@@ -19,8 +19,8 @@ const VideoDisplay = ({ className, source }) => (
     <StyledIframe
       className={className}
       src={`${source}?flush=0&showHeading=0&hideBottomBar=1`}
-      frameborder="0"
-      allowfullscreen
+      frameBorder="0"
+      allowFullScreen
       webkitallowfullscreen
       mozallowfullscreen />
   </StyledVideoDisplayDiv>
