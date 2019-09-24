@@ -1,5 +1,5 @@
 import { la1tvFetcher } from 'utilities/api'
-import watchHandler from '../../pages/api/watch'
+import watchHandler from 'pages/api/watch'
 
 jest.mock('utilities/api')
 
