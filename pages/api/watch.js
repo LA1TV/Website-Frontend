@@ -2,7 +2,7 @@ import { la1tvFetcher } from 'utilities/api'
 
 const parseResponse = ({ mediaItem: { name, description, embed: { iframeUrl } } }) => ({
   name,
-  description: 'sinw rwar sdfw sdg sdh sda g sdg  gdfgnsjfdsfgsfg sfgdfg',
+  description,
   embed: iframeUrl
 })
 
