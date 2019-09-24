@@ -24,7 +24,7 @@ const DeafultSidebar = styled.div`
   }
 `
 
-const Sidebar = ({ left, right, sidebarOnRight, minWidth = '30%', sidebarWidth = '40rem' }) => (
+const Sidebar = ({ left, right, sidebarOnRight, minWidth = '30%', sidebarWidth = '35rem' }) => (
   <DeafultSidebar
     sidebarOnRight={sidebarOnRight}
     minWidth={minWidth}
