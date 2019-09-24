@@ -12,9 +12,9 @@ const generateConfigFromEnvironmentVariables = () => {
 
   try {
     if (!fs.existsSync(configPath)) {
-      fs.writeFileSync(configPath, configFile);
+      fs.writeFileSync(configPath, configFile)
     }
-  } catch(err) {
+  } catch (err) {
     console.error(err)
   }
 }
