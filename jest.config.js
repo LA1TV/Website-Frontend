@@ -6,9 +6,13 @@ const ignorePaths = [
   '.next'
 ]
 
+const coverageIgnorePaths = [
+  'utilities/global-css/index.js'
+]
+
 module.exports = {
   collectCoverageFrom: ['<rootDir>/**/*{.js,x}'],
-  coveragePathIgnorePatterns: [...ignorePaths],
+  coveragePathIgnorePatterns: [...ignorePaths, ...coverageIgnorePaths],
   coverageThreshold: {
     global: {
       branches: 100,
