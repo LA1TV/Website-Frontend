@@ -3,27 +3,19 @@ import fetch from 'isomorphic-unfetch'
 import Sidebar from 'layouts/Sidebar'
 import Center from 'layouts/Center'
 import VideoDisplay from 'components/VideoDisplay'
-import styled from 'styled-components'
+import Paragraph from 'components/Paragraph'
+import Heading from 'components/Heading'
 import Error from 'next/error'
-
-const VideoName = styled.h1`
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: ${({ theme }) => theme.color.primary}
-`
 
 const Post = ({ name, description, embed, statusCode }) => {
   if (statusCode !== 200) return <Error statusCode={statusCode} />
 
-  const left =
-    <>
-        <VideoDisplay source={embed} />
-    </>
+  const left = <VideoDisplay source={embed} />
 
   const right =
     <>
-      <VideoName>{name}</VideoName>
-      {description}
+      <Heading type="h1">{name}</Heading>
+      <Paragraph>{description}</Paragraph>
     </>
 
   return (

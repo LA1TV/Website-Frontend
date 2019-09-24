@@ -25,20 +25,21 @@ const StyledCenter = styled(Center)`
 const Navigation = ({ children }) => (
   <>
     <Head>
-      <title>Index</title>
+      <title>LA1TV</title>
       <meta name="viewport" content="initial-scale=1.0, width=devide-width" />
     </Head>
-      <StyledNav>
-        <StyledCenter>
-          <StyledEmbed src="/static/images/logo.svg"/>
-          <StyledOrderedList>
-            <NavigationLink href="/">Home</NavigationLink>
-            <NavigationLink href="/watch/328">Shows</NavigationLink>
-          </StyledOrderedList>
-        </StyledCenter>
-      </StyledNav>
-
-    {children}
+    <StyledNav>
+      <StyledCenter>
+        <StyledEmbed src="/static/images/logo.svg"/>
+        <StyledOrderedList>
+          <NavigationLink href="/">Home</NavigationLink>
+          <NavigationLink href="/watch/210">Shows</NavigationLink>
+        </StyledOrderedList>
+      </StyledCenter>
+    </StyledNav>
+    <Center>
+      {children}
+    </Center>
   </>
 )
 
