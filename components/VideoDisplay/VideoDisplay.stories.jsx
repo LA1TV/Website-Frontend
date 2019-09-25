@@ -1,4 +1,5 @@
 import React from 'react'
+import { text } from '@storybook/addon-knobs'
 import styled from 'styled-components'
 import VideoDisplay from '.'
 
@@ -10,10 +11,10 @@ export default { title: 'VideoDisplay' }
 
 export const containedVideo = () => (
   <StyledDiv>
-    <VideoDisplay source="https://embed.la1tv.co.uk/113/210" />
+    <VideoDisplay source={text('Source', 'https://embed.la1tv.co.uk/113/210')} />
   </StyledDiv>
 )
 
 export const fullwidthVideo = () => (
-  <VideoDisplay source="https://embed.la1tv.co.uk/113/210" />
+  <VideoDisplay source={text('Source', 'https://embed.la1tv.co.uk/113/210')} />
 )

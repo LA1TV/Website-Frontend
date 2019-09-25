@@ -11,7 +11,7 @@
     "test": "yarn lint",
     "dev": "node server.js",
     "start": "NODE_ENV=production node server.js",
-    "storybook": "start-storybook"
+    "storybook": "start-storybook -p 6006"
   },
   "repository": {
     "type": "git",
@@ -40,6 +40,11 @@
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",
+    "@storybook/addon-a11y": "^5.2.1",
+    "@storybook/addon-actions": "^5.2.1",
+    "@storybook/addon-knobs": "^5.2.1",
+    "@storybook/addon-storysource": "^5.2.1",
+    "@storybook/addon-viewport": "^5.2.1",
     "@storybook/react": "^5.2.1",
     "babel-loader": "^8.0.6",
     "babel-plugin-module-resolver": "^3.2.0",
