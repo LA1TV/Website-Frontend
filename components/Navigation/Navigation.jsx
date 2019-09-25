@@ -25,7 +25,7 @@ const Navigation = ({ children }) => (
       <meta name="viewport" content="initial-scale=1.0, width=devide-width" />
     </Head>
     <StyledNav>
-      <StyledEmbed src={join(__dirname, '..', '..', 'static', 'images', 'logo.svg')}/>
+      <StyledEmbed src="/static/images/logo.svg"/>
       <StyledOrderedList>
         <NavigationLink href="/">Home</NavigationLink>
         <NavigationLink href="/watch/328">Shows</NavigationLink>
