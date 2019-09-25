@@ -6,6 +6,8 @@ import { withKnobs } from '@storybook/addon-knobs';
 import { createGlobalStyle } from 'styled-components'
 import globalCss from 'utilities/global-css'
 
+import '@storybook/addon-console';
+
 const GlobalCSS = createGlobalStyle`
   ${globalCss}
 `
