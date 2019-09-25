@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import Head from 'next/head'
 import { NavigationLink } from '../Link'
 import React from 'react'
-import { join } from 'path'
+
 const StyledNav = styled.nav`
   width: 100%;
   display: flex;
