@@ -15,16 +15,17 @@ addDecorator(withA11y)
 addDecorator(withKnobs)
 
 addParameters({
+  backgrounds: [
+    { name: 'Dark', value: '#000', default: true },
+    { name: 'Light', value: '#FFF' },
+  ],
   options: {
     theme: themes.dark,
-  }
-});
-
-addParameters({
+  },
   viewport: {
     viewports: INITIAL_VIEWPORTS,
-  }
-})
+  },
+});
 
 configure([
     require.context('../components', true, /\.stories\.jsx$/),
