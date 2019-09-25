@@ -10,7 +10,8 @@
     "jest": "jest --coverage",
     "test": "yarn lint",
     "dev": "node server.js",
-    "start": "NODE_ENV=production node server.js"
+    "start": "NODE_ENV=production node server.js",
+    "storybook": "start-storybook"
   },
   "repository": {
     "type": "git",
@@ -38,6 +39,9 @@
     "styled-components": "^4.4.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.6.2",
+    "@storybook/react": "^5.2.1",
+    "babel-loader": "^8.0.6",
     "babel-plugin-module-resolver": "^3.2.0",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
