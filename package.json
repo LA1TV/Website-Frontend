@@ -13,7 +13,8 @@
     "test:coverage": "jest",
     "pretest": "node scripts/pretest.js",
     "reportCoverage": "echo 'coveralls coming soon'",
-    "start": "NODE_ENV=production next start"
+    "start": "NODE_ENV=production next start",
+    "storybook": "start-storybook -p 6006"
   },
   "repository": {
     "type": "git",
@@ -37,9 +38,19 @@
     "next": "^9.0.6",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "styled-components": "^4.3.2"
+    "styled-components": "^4.4.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.6.2",
+    "@storybook/addon-a11y": "^5.2.1",
+    "@storybook/addon-actions": "^5.2.1",
+    "@storybook/addon-backgrounds": "^5.2.1",
+    "@storybook/addon-console": "^1.2.1",
+    "@storybook/addon-knobs": "^5.2.1",
+    "@storybook/addon-storysource": "^5.2.1",
+    "@storybook/addon-viewport": "^5.2.1",
+    "@storybook/react": "^5.2.1",
+    "babel-loader": "^8.0.6",
     "babel-plugin-module-resolver": "^3.2.0",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
