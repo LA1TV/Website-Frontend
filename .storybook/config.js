@@ -31,7 +31,7 @@ addParameters({
 
 configure([
     require.context('../components', true, /\.stories\.jsx$/),
-    // require.context('../layouts', true, /\.stories\.jsx$/)
+    require.context('../layouts', true, /\.stories\.jsx$/)
   ],
   module
 );
