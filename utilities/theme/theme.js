@@ -9,7 +9,8 @@ const theme = {
     double: pxToRem(24)
   },
   color: {
-    background: '#1e1e1e',
+    background: '#000000',
+    navBackground: '#1e1e1e',
     primary: '#f9f9f9',
     accent: '#bb0022'
   }

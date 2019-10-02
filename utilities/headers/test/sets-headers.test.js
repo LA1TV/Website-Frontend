@@ -1,4 +1,4 @@
-const setHeaders = require('../index')
+import setHeaders from '..'
 
 test('sets headers', () => {
   const mockRes = {

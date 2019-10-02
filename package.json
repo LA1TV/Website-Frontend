@@ -4,13 +4,16 @@
   "description": "New website frontend written in Node",
   "main": "index.js",
   "scripts": {
-    "coveralls": "echo 'coveralls coming soon'",
+    "dev": "next dev",
+    "jest": "yarn test:coverage --coverage --watch",
+    "clean": "git clean -xfdq --exclude=config.json",
     "build": "next build",
-    "lint": "eslint ./ --ext js,jsx",
-    "jest": "jest --coverage",
-    "test": "yarn lint",
-    "dev": "node server.js",
-    "start": "NODE_ENV=production node server.js",
+    "test": "yarn test:lint && yarn test:coverage",
+    "test:lint": "eslint ./ --ext js,jsx",
+    "test:coverage": "jest",
+    "pretest": "node scripts/pretest.js",
+    "reportCoverage": "echo 'coveralls coming soon'",
+    "start": "NODE_ENV=production next start",
     "storybook": "start-storybook -p 6006"
   },
   "repository": {
@@ -31,7 +34,6 @@
   },
   "homepage": "https://github.com/LA1TV/Website-Frontend#readme",
   "dependencies": {
-    "dotenv": "^8.1.0",
     "isomorphic-unfetch": "^3.0.0",
     "next": "^9.0.6",
     "react": "^16.9.0",

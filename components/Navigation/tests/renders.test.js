@@ -6,7 +6,7 @@ test('renders', () => {
     <Fragment>
       <Head>
         <title>
-          Index
+          LA1TV
         </title>
         <meta
           content="initial-scale=1.0, width=devide-width"
@@ -14,42 +14,27 @@ test('renders', () => {
         />
       </Head>
       <Navigation__StyledNav>
-        <Navigation__StyledEmbed
-          src="/static/images/logo.svg"
-        />
-        <Navigation__StyledOrderedList>
-          <NavigationLink
-            href="/"
-          >
-            Home
-          </NavigationLink>
-          <NavigationLink
-            href="/watch/328"
-          >
-            Shows
-          </NavigationLink>
-          <NavigationLink
-            href="/playlists"
-          >
-            Playlists
-          </NavigationLink>
-          <NavigationLink
-            href="/live"
-          >
-            Livestreams
-          </NavigationLink>
-          <NavigationLink
-            href="https://confluence.la1tv.co.uk/"
-          >
-            Wiki
-          </NavigationLink>
-          <NavigationLink
-            href="/contact"
-          >
-            Contact
-          </NavigationLink>
-        </Navigation__StyledOrderedList>
+        <Center
+          intrinsicCenter={true}
+        >
+          <Navigation__StyledEmbed
+            src="/static/images/logo.svg"
+          />
+          <Navigation__StyledOrderedList>
+            <NavigationLink
+              href="/"
+            >
+              Home
+            </NavigationLink>
+            <NavigationLink
+              href="/watch/210"
+            >
+              Shows
+            </NavigationLink>
+          </Navigation__StyledOrderedList>
+        </Center>
       </Navigation__StyledNav>
+      <Center />
     </Fragment>
   `)
 })

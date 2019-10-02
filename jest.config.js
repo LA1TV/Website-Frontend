@@ -6,9 +6,13 @@ const ignorePaths = [
   '.next'
 ]
 
+const coverageIgnorePaths = [
+  'utilities/global-css/index.js'
+]
+
 module.exports = {
   collectCoverageFrom: ['<rootDir>/**/*{.js,x}'],
-  coveragePathIgnorePatterns: [...ignorePaths],
+  coveragePathIgnorePatterns: [...ignorePaths, ...coverageIgnorePaths],
   coverageThreshold: {
     global: {
       branches: 100,
@@ -18,7 +22,8 @@ module.exports = {
     }
   },
   clearMocks: true,
-  setupFiles: ['<rootDir>/tooling/jest/setup.js'],
+  setupFiles: ['<rootDir>/tooling/jest/setup-enzyme.js'],
+  setupFilesAfterEnv: ['<rootDir>/tooling/jest/setup.js'],
   snapshotSerializers: ['enzyme-to-json/serializer'],
   testMatch: ['**/?(*.)test.js?(x)'],
   testPathIgnorePatterns: [...ignorePaths],

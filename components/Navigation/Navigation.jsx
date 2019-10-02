@@ -2,11 +2,11 @@ import styled from 'styled-components'
 import Head from 'next/head'
 import { NavigationLink } from '../Link'
 import React from 'react'
+import Center from 'layouts/Center'
 
 const StyledNav = styled.nav`
   width: 100%;
-  display: flex;
-  background-color: ${({ theme }) => theme.color.background};
+  background-color: ${({ theme }) => theme.color.navBackground};
   border-bottom: 2px solid ${({ theme }) => theme.color.accent};
 `
 
@@ -21,22 +21,21 @@ const StyledOrderedList = styled.ol`
 const Navigation = ({ children }) => (
   <>
     <Head>
-      <title>Index</title>
+      <title>LA1TV</title>
       <meta name="viewport" content="initial-scale=1.0, width=devide-width" />
     </Head>
     <StyledNav>
-      <StyledEmbed src="/static/images/logo.svg"/>
-      <StyledOrderedList>
-        <NavigationLink href="/">Home</NavigationLink>
-        <NavigationLink href="/watch/328">Shows</NavigationLink>
-        <NavigationLink href="/playlists">Playlists</NavigationLink>
-        <NavigationLink href="/live">Livestreams</NavigationLink>
-        <NavigationLink href="https://confluence.la1tv.co.uk/">Wiki</NavigationLink>
-        <NavigationLink href="/contact">Contact</NavigationLink>
-      </StyledOrderedList>
+      <Center intrinsicCenter>
+        <StyledEmbed src="/static/images/logo.svg"/>
+        <StyledOrderedList>
+          <NavigationLink href="/">Home</NavigationLink>
+          <NavigationLink href="/watch/210">Shows</NavigationLink>
+        </StyledOrderedList>
+      </Center>
     </StyledNav>
-
-    {children}
+    <Center>
+      {children}
+    </Center>
   </>
 )
 

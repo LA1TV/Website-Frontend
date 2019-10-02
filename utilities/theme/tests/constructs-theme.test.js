@@ -5,7 +5,8 @@ test('16px goes to 1rem', () => {
     Object {
       "color": Object {
         "accent": "#bb0022",
-        "background": "#1e1e1e",
+        "background": "#000000",
+        "navBackground": "#1e1e1e",
         "primary": "#f9f9f9",
       },
       "spacing": Object {

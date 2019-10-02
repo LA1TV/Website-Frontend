@@ -1,31 +1,26 @@
+import App from 'next/app'
 import React from 'react'
-import App, { Container } from 'next/app'
-import { ThemeProvider } from 'styled-components'
+import { ThemeProvider, createGlobalStyle } from 'styled-components'
 import theme from 'utilities/theme'
 import Navigation from 'components/Navigation'
+import globalCss from 'utilities/global-css'
 
 class AppWrapper extends App {
-  static async getInitialProps ({ Component, ctx }) {
-    let pageProps = {}
-
-    if (Component.getInitialProps) {
-      pageProps = await Component.getInitialProps(ctx)
-    }
-
-    return { pageProps }
-  }
-
   render () {
+    const GlobalCSS = createGlobalStyle`
+      ${globalCss}
+      body {
+        background-color: ${({ theme }) => theme.color.background}
+      }
+    `
     const { Component, pageProps } = this.props
-
     return (
-      <Container>
-        <ThemeProvider theme={theme}>
-          <Navigation>
-            <Component {...pageProps} />
-          </Navigation>
-        </ThemeProvider>
-      </Container>
+      <ThemeProvider theme={theme}>
+        <Navigation>
+          <GlobalCSS />
+          <Component {...pageProps} />
+        </Navigation>
+      </ThemeProvider>
     )
   }
 }

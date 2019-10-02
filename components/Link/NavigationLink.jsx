@@ -8,7 +8,7 @@ const StyledLink = styled(Link)`
   display: inline-block;
   font-weight: bold;
   text-transform: uppercase;
-  background-color: ${({ theme }) => theme.color.background};
+  background-color: ${({ theme }) => theme.color.navBackground};
   color: ${({ theme }) => theme.color.primary};
   transition: background-color 50ms linear, color 50ms linear;
 

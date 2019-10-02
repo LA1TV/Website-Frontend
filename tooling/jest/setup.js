@@ -1,4 +1,15 @@
-import { configure } from 'enzyme'
-import Adapter from 'enzyme-adapter-react-16'
+let usersLa1tvApiKey
 
-configure({ adapter: new Adapter() })
+beforeAll(() => {
+  usersLa1tvApiKey = process.env.LA1TV_API_KEY
+
+  process.env.LA1TV_API_KEY = 'someApiKey'
+})
+
+beforeEach(() => {
+  process.env.LA1TV_API_KEY = 'someApiKey'
+})
+
+afterAll(() => {
+  process.env.LA1TV_API_KEY = usersLa1tvApiKey
+})

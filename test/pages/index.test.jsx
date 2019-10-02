@@ -3,10 +3,8 @@ import Index from 'pages/index.js'
 
 test('should be able to render', () => {
   expect(renderToJson(Index)).toMatchInlineSnapshot(`
-    <div>
-      <p>
-        Hello Next.js
-      </p>
-    </div>
+    <Paragraph>
+      Hello Next.js
+    </Paragraph>
   `)
 })

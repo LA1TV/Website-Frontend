@@ -1,47 +1,33 @@
 import React from 'react'
 import fetch from 'isomorphic-unfetch'
+import Sidebar from 'layouts/Sidebar'
+import Center from 'layouts/Center'
 import VideoDisplay from 'components/VideoDisplay'
-import styled from 'styled-components'
+import Paragraph from 'components/Paragraph'
+import Heading from 'components/Heading'
 import Error from 'next/error'
 
-const Page = styled.div`
-  display: grid;
-  grid-auto-flow: row;
-  grid-template-columns: 3fr 1fr;
-  grid-template-rows: 1fr;
-  grid-gap: ${({ theme }) => theme.spacing.double};
-  padding: ${({ theme }) => theme.spacing.double};
+const Post = ({ name, description, embed, statusCode }) => {
+  if (statusCode !== 200) return <Error statusCode={statusCode} />
 
-  @media (max-width: 1023px) {
-    grid-template-columns: 1fr;
-    padding: 0;
-  } 
-`
+  const left = <VideoDisplay source={embed} />
 
-const VideoName = styled.h1`
-  font-size: 2.5rem;
-  font-weight: bold;
-`
+  const right =
+    <>
+      <Heading type="h1">{name}</Heading>
+      <Paragraph>{description}</Paragraph>
+    </>
 
-const StyledVideoDisplayDiv = styled.div`
-  padding-bottom: ${({ theme }) => theme.spacing.double};
-`
+  return (
+    <Center>
+      <Sidebar left={left} right={right} />
+    </Center>
+  )
+}
 
-const Post = ({ name, embed, statusCode }) => statusCode !== 200
-  ? <Error statusCode={statusCode} />
-  : <Page>
-    <div>
-      <StyledVideoDisplayDiv>
-        <VideoDisplay source={embed} />
-      </StyledVideoDisplayDiv>
-      <VideoName>{name}</VideoName>
-    </div>
-
-    <h1>This is some text for Ben gawsh darnit woman.</h1>
-  </Page>
-
-Post.getInitialProps = async function ({ query: { videoId } }) {
+Post.getInitialProps = async ({ query: { videoId } }) => {
   const res = await fetch(`http://localhost:3000/api/watch?videoId=${videoId}`)
+
   const statusCode = res.status
 
   if (statusCode !== 200) return { statusCode }

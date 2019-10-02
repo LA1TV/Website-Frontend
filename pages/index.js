@@ -1,9 +1,8 @@
 import React from 'react'
+import Paragraph from 'components/Paragraph'
 
 const Index = () => (
-  <div>
-    <p>Hello Next.js</p>
-  </div>
+  <Paragraph>Hello Next.js</Paragraph>
 )
 
 export default Index
