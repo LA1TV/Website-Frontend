@@ -7,11 +7,11 @@ const StyledHeading = ({ type }) => styled(type)`
   font-weight: bold;
 `
 
-const Heading = ({ type = 'h1', children }) => {
+const Heading = ({ type = 'h1', children, className }) => {
   const HeadingWithType = StyledHeading({ type })
 
   return (
-    <HeadingWithType>
+    <HeadingWithType className={className}>
       {children}
     </HeadingWithType>
   )
