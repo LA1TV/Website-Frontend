@@ -7,7 +7,7 @@ const StyledDiv = styled.div`
   width: 640px
 `
 
-export default { title: 'VideoDisplay' }
+export default { title: 'Components|VideoDisplay' }
 
 export const containedVideo = () => (
   <StyledDiv>

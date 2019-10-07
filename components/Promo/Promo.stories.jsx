@@ -3,7 +3,7 @@ import { ThemeProvider } from 'styled-components'
 import theme from 'utilities/theme'
 import Promo from '.'
 
-export default { title: 'Promo' }
+export default { title: 'Components|Promo' }
 
 export const basicPromo = () => (
 
