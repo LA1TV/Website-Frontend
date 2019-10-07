@@ -1,7 +1,7 @@
 import React from 'react'
 import fetch from 'isomorphic-unfetch'
 import Sidebar from 'layouts/Sidebar'
-import Center from 'layouts/Center'
+
 import VideoDisplay from 'components/VideoDisplay'
 import Paragraph from 'components/Paragraph'
 import Heading from 'components/Heading'
@@ -19,9 +19,7 @@ const Post = ({ name, description, embed, statusCode }) => {
     </>
 
   return (
-    <Center>
-      <Sidebar left={left} right={right} />
-    </Center>
+    <Sidebar left={left} right={right} />
   )
 }
 

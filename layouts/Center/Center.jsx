@@ -5,6 +5,8 @@ const DeafultCenter = styled.div`
   box-sizing: content-box;
   margin-left: auto;
   margin-right: auto;
+  padding-left: ${({ theme }) => theme.spacing.base};
+  padding-right: ${({ theme }) => theme.spacing.base};
   max-width: ${({ maxWidth }) => maxWidth};
   ${({ intrinsicCenter }) => intrinsicCenter
     ? `

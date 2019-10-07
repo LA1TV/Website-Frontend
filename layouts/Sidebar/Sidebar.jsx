@@ -8,11 +8,9 @@ const DeafultSidebar = styled.div`
   > * {
     display: flex;
     flex-wrap: wrap;
-    margin: calc(${({ theme }) => theme.spacing.base} / 2 * -1);
   }
 
   > * > * {
-    margin: calc(${({ theme }) => theme.spacing.base} / 2);
     flex-basis: ${({ sidebarWidth }) => sidebarWidth};
     flex-grow: 1;
   }
@@ -24,14 +22,22 @@ const DeafultSidebar = styled.div`
   }
 `
 
+const LeftDiv = styled.div`
+  margin-bottom: ${({ theme }) => theme.spacing.half};
+`
+
+const RightDiv = styled.div`
+  margin-left: ${({ theme }) => theme.spacing.half};
+`
+
 const Sidebar = ({ left, right, sidebarOnRight, minWidth = '30%', sidebarWidth = '35rem' }) => (
   <DeafultSidebar
     sidebarOnRight={sidebarOnRight}
     minWidth={minWidth}
     sidebarWidth={sidebarWidth}>
     <div>
-      <div>{left}</div>
-      <div>{right}</div>
+      <LeftDiv>{left}</LeftDiv>
+      <RightDiv>{right}</RightDiv>
     </div>
   </DeafultSidebar>
 )
