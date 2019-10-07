@@ -18,7 +18,7 @@ const Promo = ({ heading, description }) => {
     </>
   )
   return (
-    <Sidebar sidebarWidth="50%" minWidth="10rem" left={left} right={right}/>
+    <Sidebar sidebarWidth="50%" minWidth="12rem" left={left} right={right}/>
   )
 }
 
