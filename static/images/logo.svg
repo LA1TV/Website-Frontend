@@ -1,61 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg
-  xmlns:dc="http://purl.org/dc/elements/1.1/"
-  xmlns:cc="http://creativecommons.org/ns#"
-  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-  xmlns:svg="http://www.w3.org/2000/svg"
-  xmlns="http://www.w3.org/2000/svg"
-  viewBox="0 0 755.90668 377.94666"
-  height="4em"
-  width="8em"
-  xml:space="preserve"
-  id="svg2"
-  version="1.1">
-  <metadata id="metadata8">
-    <rdf:RDF>
-      <cc:Work rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
-  <defs id="defs6">
-    <clipPath id="clipPath30" clipPathUnits="userSpaceOnUse">
-      <path id="path28" d="M 0,283.46 H 566.93 V 0 H 0 Z" />
-    </clipPath>
-  </defs>
-  <g
-    transform="matrix(1.3333333,0,0,-1.3333333,0,377.94667)"
-    id="g10">
-    <g
-      transform="translate(39.5146,213.9478)"
-      id="g12">
-      <path
-        id="path14"
-        style="fill:#bb0022;fill-opacity:1;fill-rule:nonzero;stroke:none"
-        d="m 0,0 h 33.204 v -121.708 h 45.73 v -33.441 H 0 Z" />
-    </g>
-    <g transform="translate(208.9028,163.1373)" id="g16">
-      <path
-        id="path18"
-        style="fill:#bb0022;fill-opacity:1;fill-rule:nonzero;stroke:none"
-        d="M 0,0 -18.24,-45.729 H 18.629 Z M -12.955,50.811 H 12.949 L 76.157,-104.338 H 42.504 l -12.418,30.486 h -59.542 l -12.164,-30.486 h -33.473 z" />
-    </g>
-    <g transform="translate(288.1738,213.6939)" id="g20">
-      <path
-        id="path22"
-        style="fill:#bb0022;fill-opacity:1;fill-rule:nonzero;stroke:none"
-        d="M 0,0 H 50.456 V -154.895 H 16.413 V -28.207 H -5.958 Z" />
-    </g>
-    <g id="g24">
-      <g clip-path="url(#clipPath30)" id="g26">
-        <g transform="translate(362,212.46)" id="g32">
-          <path
-              id="path34"
-              style="fill:#bb0022;fill-opacity:1;fill-rule:nonzero;stroke:none"
-              d="M 0,0 V -154 H 42.821 C 32.397,-152 25,-146.638 25,-132.732 V -78 H 9 v 18 h 16 v 28 H 50 V -60 H 69 V -78 H 50 v -45.863 c 0,-8.688 2.261,-10.861 10.948,-10.861 2.715,0 6.052,0.182 8.052,0.725 v -20.091 c 0,-0.005 0.2,0.09 0.168,0.09 h 41.198 l -32.037,93 h 26.969 l 19.728,-63 h 0.363 l 19.729,63 h 25.521 l -31.675,-93 H 178 V 0 Z" />
-        </g>
-      </g>
-    </g>
-  </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="500.4px" height="155.52px" viewBox="0 0 500.4 155.52" enable-background="new 0 0 500.4 155.52" xml:space="preserve">
+	<polygon fill="#D42027" points="0.515,-0.113 33.719,-0.113 33.719,122.085 79.449,122.085 79.449,155.661 0.515,155.661 "/>
+	<path fill="#D42027" d="M156.948,0h25.904l63.208,155.661h-33.653l-12.418-30.587h-59.542l-12.164,30.587H94.81L156.948,0z
+		 M169.903,50.979l-18.24,45.88h36.869L169.903,50.979z"/>
+	<polygon fill="#D42027" points="249.174,0 299.63,0 299.63,155.758 265.587,155.758 265.587,28.364 243.216,28.364 "/>
+	<g>
+		<path fill="#D42027" d="M323,0v155.52h42.678c-10.39-2.007-17.762-7.72-17.762-21.67V79.265H331.97v-18.06h15.946V33.11h24.915
+			v28.094h18.937v18.06h-18.937v45.687c0,8.715,2.253,10.896,10.911,10.896c2.707,0,6.032-0.183,8.025-0.728v20.158
+			c0,0.006,0.2,0.242,0.168,0.242h41.06l-31.93-93.312h26.878l19.663,63.211h0.36l19.663-63.211h25.434l-31.566,93.312H500.4V0H323z"
+			/>
+	</g>
 </svg>
