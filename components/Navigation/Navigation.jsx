@@ -11,7 +11,9 @@ const StyledNav = styled.nav`
 `
 
 const StyledEmbed = styled.img`
-  height: 100%;
+  padding-top: 1rem;
+  height: 2rem;
+
   align-self: flex-start;
 `
 const StyledOrderedList = styled.ol`
@@ -26,7 +28,7 @@ const Navigation = ({ children }) => (
     </Head>
     <StyledNav>
       <Center intrinsicCenter>
-        <StyledEmbed src="/static/images/logo.svg"/>
+        <StyledEmbed src="/static/images/logo.svg" />
         <StyledOrderedList>
           <NavigationLink href="/">Home</NavigationLink>
           <NavigationLink href="/watch/210">Shows</NavigationLink>
