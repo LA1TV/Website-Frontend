@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import Head from 'next/head'
 import { NavigationLink } from '../Link'
 import React from 'react'
 import Center from 'layouts/Center'
