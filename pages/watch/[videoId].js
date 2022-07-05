@@ -26,7 +26,7 @@ const Post = ({ name, description, embed, statusCode }) => {
 }
 
 Post.getInitialProps = async ({ query: { videoId } }) => {
-  const res = await fetch(`http://localhost:3000/api/watch?videoId=${videoId}`)
+  const res = await fetch(`/api/watch?videoId=${videoId}`)
 
   const statusCode = res.status
 
