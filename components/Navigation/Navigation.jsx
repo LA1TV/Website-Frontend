@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import Head from 'next/head'
 import { NavigationLink } from '../Link'
 import React from 'react'
 import Center from 'layouts/Center'
@@ -20,10 +19,6 @@ const StyledOrderedList = styled.ol`
 
 const Navigation = ({ children }) => (
   <>
-    <Head>
-      <title>LA1TV</title>
-      <meta name="viewport" content="initial-scale=1.0, width=devide-width" />
-    </Head>
     <StyledNav>
       <Center intrinsicCenter>
         <StyledEmbed src="/static/images/logo.svg"/>

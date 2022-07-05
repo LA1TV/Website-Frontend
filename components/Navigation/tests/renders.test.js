@@ -4,15 +4,6 @@ import Navigation from '..'
 test('renders', () => {
   expect(renderToJson(Navigation)).toMatchInlineSnapshot(`
     <Fragment>
-      <Head>
-        <title>
-          LA1TV
-        </title>
-        <meta
-          content="initial-scale=1.0, width=devide-width"
-          name="viewport"
-        />
-      </Head>
       <Navigation__StyledNav>
         <Center
           intrinsicCenter={true}

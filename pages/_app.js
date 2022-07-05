@@ -4,6 +4,7 @@ import { ThemeProvider, createGlobalStyle } from 'styled-components'
 import theme from 'utilities/theme'
 import Navigation from 'components/Navigation'
 import globalCss from 'utilities/global-css'
+import Head from 'next/head'
 
 class AppWrapper extends App {
   render () {
@@ -16,6 +17,10 @@ class AppWrapper extends App {
     const { Component, pageProps } = this.props
     return (
       <ThemeProvider theme={theme}>
+        <Head>
+          <title>LA1TV</title>
+          <meta name="viewport" content="initial-scale=1.0, width=devide-width" />
+        </Head>
         <Navigation>
           <GlobalCSS />
           <Component {...pageProps} />
