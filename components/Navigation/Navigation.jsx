@@ -20,10 +20,6 @@ const StyledOrderedList = styled.ol`
 
 const Navigation = ({ children }) => (
   <>
-    <Head>
-      <title>LA1TV</title>
-      <meta name="viewport" content="initial-scale=1.0, width=devide-width" />
-    </Head>
     <StyledNav>
       <Center intrinsicCenter>
         <StyledEmbed src="/static/images/logo.svg"/>
