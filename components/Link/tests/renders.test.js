@@ -3,9 +3,9 @@ import Link, { NavigationLink } from '..'
 
 test('renders', () => {
   expect(renderToJson(Link)).toMatchInlineSnapshot(`
-    <Link>
+    <ForwardRef(LinkComponent)>
       <Link__StyledLink />
-    </Link>
+    </ForwardRef(LinkComponent)>
   `)
 })
 
