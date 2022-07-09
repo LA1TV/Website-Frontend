@@ -2,11 +2,8 @@ import { addDecorator, addParameters, configure } from '@storybook/react';
 import { themes } from '@storybook/theming';
 import { withA11y } from '@storybook/addon-a11y';
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
-import { withKnobs } from '@storybook/addon-knobs';
 import { createGlobalStyle } from 'styled-components'
 import globalCss from 'utilities/global-css'
-
-import '@storybook/addon-console';
 
 const GlobalCSS = createGlobalStyle`
   ${globalCss}
@@ -14,7 +11,6 @@ const GlobalCSS = createGlobalStyle`
 
 addDecorator(s => <><GlobalCSS />{s()}</>);
 addDecorator(withA11y)
-addDecorator(withKnobs)
 
 addParameters({
   backgrounds: [
@@ -28,12 +24,3 @@ addParameters({
     viewports: INITIAL_VIEWPORTS,
   },
 });
-
-configure([
-    require.context('../components', true, /\.stories\.jsx$/),
-    require.context('../layouts', true, /\.stories\.jsx$/)
-  ],
-  module
-);
-
-
