@@ -19,6 +19,7 @@ const VideoDisplay = ({ className, source }) => (
     <StyledIframe
       className={className}
       src={`${source}?flush=0&showHeading=0&hideBottomBar=1`}
+      title="LA1 Video Player"
       frameBorder="0"
       allowFullScreen
       webkitallowfullscreen

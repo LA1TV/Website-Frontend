@@ -9,9 +9,10 @@ const StyledNav = styled.nav`
   border-bottom: 2px solid ${({ theme }) => theme.color.accent};
 `
 
-const StyledEmbed = styled.img`
+const StyledLogo = styled.img`
   height: 100%;
   align-self: flex-start;
+  color:${({ theme }) => theme.color.accent};
 `
 const StyledOrderedList = styled.ol`
   margin-left: auto;
@@ -21,7 +22,7 @@ const Navigation = ({ children }) => (
   <>
     <StyledNav>
       <Center intrinsicCenter>
-        <StyledEmbed src="/static/images/logo.svg"/>
+        <StyledLogo src="/static/images/logo.svg" alt="LA1TV"/>
         <StyledOrderedList>
           <NavigationLink href="/">Home</NavigationLink>
           <NavigationLink href="/watch/210">Shows</NavigationLink>
