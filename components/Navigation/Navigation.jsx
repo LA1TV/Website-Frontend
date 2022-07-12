@@ -25,7 +25,7 @@ const Navigation = ({ children }) => (
         <StyledLogo src="/static/images/logo.svg" alt="LA1TV"/>
         <StyledOrderedList>
           <NavigationLink href="/">Home</NavigationLink>
-          <NavigationLink href="/watch/210">Shows</NavigationLink>
+          <NavigationLink href="/watch/1">Shows</NavigationLink>
         </StyledOrderedList>
       </Center>
     </StyledNav>

@@ -2,7 +2,7 @@ import fetch from 'isomorphic-unfetch'
 import config from '../../config.json'
 
 const la1tvFetcher = async ({ url, parser = data => data }) => {
-  const requestUrl = `https://www.la1tv.co.uk/api/v1/${url}`
+  const requestUrl = (process.env.LA1TV_API_ENDPOINT || config.env.LA1TV_API_ENDPOINT) + url
 
   let response
 
@@ -16,14 +16,17 @@ const la1tvFetcher = async ({ url, parser = data => data }) => {
     })
 
     response = await la1tv.json()
+    console.log(response)
   } catch (error) {
+    console.error(error);
     return {
       statusCode: 404,
       body: 'Not found'
     }
   }
 
-  if (response.data === undefined) {
+  if (response === undefined) {
+    console.log("Got nothing")
     return {
       statusCode: 404,
       body: 'Not found'
@@ -32,7 +35,7 @@ const la1tvFetcher = async ({ url, parser = data => data }) => {
 
   return {
     statusCode: 200,
-    body: parser(response.data)
+    body: parser(response)
   }
 }
 

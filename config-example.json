@@ -1,5 +1,7 @@
 {
   "env": {
-    "LA1TV_API_KEY": "someKey"
+    "LA1TV_API_KEY": "someKey",
+    "LA1TV_API_ENDPOINT": "https://www.la1tv.co.uk/api/v1/",
+    "FRONTEND_DOMAIN": "http://localhost:3000"
   }
 }

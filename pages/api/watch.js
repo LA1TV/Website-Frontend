@@ -1,13 +1,15 @@
 import { la1tvFetcher } from 'utilities/api'
 
-const parseResponse = ({ mediaItem: { name, description, embed: { iframeUrl } } }) => ({
+const parseResponse = ({ name, description, thumbnailS3Bucket, thumbnailS3Object, Streamables }) => ({
   name,
   description,
-  embed: iframeUrl
+  thumbnailS3Bucket,
+  thumbnailS3Object,
+  Streamables
 })
 
 const handle = async ({ query: { videoId } }, res) => {
-  const url = `mediaItems/${videoId}`
+  const url = `/v1/video/${videoId}`
 
   const { statusCode, body } = await la1tvFetcher({ url, parser: parseResponse })
 
