@@ -17,6 +17,7 @@ const StyledLink = styled(Link)`
     cursor: pointer;
     background-color: ${({ theme }) => theme.color.primary};
     color: ${({ theme }) => theme.color.accent};
+    text-decoration: none;
   }
 `
 

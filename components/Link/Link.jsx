@@ -10,6 +10,8 @@ const StyledLink = styled.a`
   :active {
     cursor: pointer;
     color: ${({ theme }) => theme.color.accent};
+    text-decoration: underline;
+    text-decoration-color: ${({ theme }) => theme.color.primary};
   }
 `
 
