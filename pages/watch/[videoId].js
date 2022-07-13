@@ -11,12 +11,9 @@ import config from '../../config.json'
 const Post = ({ name, description, Streamables, thumbnailS3Bucket, thumbnailS3Object, statusCode }) => {
   if (statusCode !== 200) return <Error statusCode={statusCode} />
 
-  const left = <VideoDisplay
-    streamables={Streamables}
-    poster={`${process.env.LA1TV_API_ENDPOINT || config.env.LA1TV_API_ENDPOINT}/v1/s3/${thumbnailS3Bucket}/${thumbnailS3Object}`}
-    />
+  const right = <></>
 
-  const right =
+  const left =
     <>
       <Heading type="h1">{name}</Heading>
       <Paragraph>{description}</Paragraph>
@@ -24,6 +21,10 @@ const Post = ({ name, description, Streamables, thumbnailS3Bucket, thumbnailS3Ob
 
   return (
     <Center>
+      <VideoDisplay
+      streamables={Streamables}
+      poster={`${process.env.LA1TV_API_ENDPOINT || config.env.LA1TV_API_ENDPOINT}/v1/s3/${thumbnailS3Bucket}/${thumbnailS3Object}`}
+      />
       <Sidebar left={left} right={right} />
     </Center>
   )
