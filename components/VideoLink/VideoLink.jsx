@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Heading from '../Heading'
 import Paragraph from '../Paragraph'
+import Link from '../Link'
 
 const StyledImg = styled.img`
   width: 100%;
@@ -14,11 +15,15 @@ const StyledVideoLinkDiv = styled.div`
   position: relative;
 `
 
-const VideoLink = ({ className, title, description, poster }) => (
+const VideoLink = ({ className, title, description, poster, link }) => (
   <StyledVideoLinkDiv>
-    <StyledImg src={poster} />
-    <Heading type="h2">{title}</Heading>
-    <Paragraph>{description}</Paragraph>
+    <Link href={link}>
+      <span>
+        <StyledImg src={poster} />
+        <Heading type="h2">{title}</Heading>
+        <Paragraph>{description}</Paragraph>
+      </span>
+    </Link>
   </StyledVideoLinkDiv>
 )
 
