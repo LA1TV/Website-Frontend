@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Player } from 'video-react';
-import "node_modules/video-react/dist/video-react.css";
+import { Player } from 'video-react'
+import 'node_modules/video-react/dist/video-react.css'
 import config from '../../config.json'
 
 const StyledPlayer = styled(Player)`
@@ -23,8 +23,8 @@ const VideoDisplay = ({ className, streamables, poster }) => (
       fluid={false}
       width=""
       height=""
-     >
-      {streamables.map(function(streamable) {
+    >
+      {streamables.map(function (streamable) {
         return <source src={`${process.env.LA1TV_API_ENDPOINT || config.env.LA1TV_API_ENDPOINT}/v1/s3/${streamable.s3Bucket}/${streamable.s3Object}`} />
       })}
     </StyledPlayer>

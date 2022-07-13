@@ -20,7 +20,7 @@ export const fullwidthVideoLink = (args) => (
   <VideoLink source={args} />
 )
 
-let args = {title: "Test", description: "Description", poster: "http://localhost:8000/v1/s3/thumbnails/good%20owl.jpg"};
+const args = { title: 'Test', description: 'Description', poster: 'http://localhost:8000/v1/s3/thumbnails/good%20owl.jpg' }
 
 containedVideoLink.args = args
 fullwidthVideoLink.args = args
