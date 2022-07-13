@@ -24,8 +24,8 @@ const VideoDisplay = ({ className, streamables, poster }) => (
       width=""
       height=""
     >
-      {streamables.map(function (streamable) {
-        return <source src={`${process.env.LA1TV_API_ENDPOINT || config.env.LA1TV_API_ENDPOINT}/v1/s3/${streamable.s3Bucket}/${streamable.s3Object}`} />
+      {streamables.map(function (streamable, key) {
+        return <source key={key} src={`${process.env.LA1TV_API_ENDPOINT || config.env.LA1TV_API_ENDPOINT}/v1/s3/${streamable.s3Bucket}/${streamable.s3Object}`} />
       })}
     </StyledPlayer>
   </StyledVideoDisplayDiv>

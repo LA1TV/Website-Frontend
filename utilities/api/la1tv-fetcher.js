@@ -18,7 +18,7 @@ const la1tvFetcher = async ({ url, parser = data => data }) => {
     response = await la1tv.json()
     console.log(response)
   } catch (error) {
-    console.error(error);
+    console.error(error)
     return {
       statusCode: 404,
       body: 'Not found'
@@ -26,7 +26,7 @@ const la1tvFetcher = async ({ url, parser = data => data }) => {
   }
 
   if (response === undefined) {
-    console.log("Got nothing")
+    console.log('Got nothing')
     return {
       statusCode: 404,
       body: 'Not found'
