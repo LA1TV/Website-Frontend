@@ -1,1 +1,1 @@
-sudo docker run -p 3001:3001 -d website-frontend yarn start
+sudo docker run -p 3000:3000 -d website-frontend yarn start
