@@ -1,7 +1,7 @@
 import React from 'react'
 import Heading from 'components/Heading'
 import Paragraph from 'components/Paragraph'
-import TextField from 'components/TextField'
+import TextField from 'components/FormFields/TextField'
 import Button from 'components/Button'
 import { inputState } from 'utilities/hooks'
 import config from '../../../config.json'
