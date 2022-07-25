@@ -33,9 +33,11 @@ const S3FileUpload = ({ label, s3bucket }) => {
       const url = res.PUTurl
 
       setStatus('Uploading...')
+      // eslint-disable-next-line no-undef
       const formData = new FormData()
       formData.append('File', file.value)
 
+      // eslint-disable-next-line no-undef
       const xhr = new XMLHttpRequest()
       xhr.upload.addEventListener('progress', function (e) {
         if (e.lengthComputable) {
@@ -44,7 +46,7 @@ const S3FileUpload = ({ label, s3bucket }) => {
             minimumFractionDigits: 2,
             maximumFractionDigits: 2,
             minimumSignificantDigits: 3,
-            maximumSignificantDigits: 3+2,
+            maximumSignificantDigits: 3 + 2,
             style: 'percent'
           })
           setStatus('Uploading... ' + formattedPercent)

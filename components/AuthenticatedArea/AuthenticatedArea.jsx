@@ -7,6 +7,7 @@ const AuthenticatedArea = ({ children, forceLogin = false }) => {
   const [apikey, setApikey] = React.useState()
   let APIKey = ''
   React.useEffect(() => {
+    // eslint-disable-next-line no-undef
     APIKey = sessionStorage.getItem('apikey')
     if (forceLogin && APIKey === null) {
       router.push('/account/login')

@@ -5,7 +5,6 @@ import Paragraph from 'components/Paragraph'
 import S3FileUpload from 'components/FormFields/S3FileUpload'
 
 const Index = () => {
-  const { apikey } = React.useContext(AuthContext)
   return <AuthenticatedArea forceLogin>
     <Paragraph>Hello Next.js</Paragraph>
     <AuthContext.Consumer>{value => <>

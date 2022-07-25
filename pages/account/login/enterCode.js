@@ -29,6 +29,7 @@ const CodePage = () => {
           })
         } else {
           const response = await res.json()
+          // eslint-disable-next-line no-undef
           sessionStorage.setItem('apikey', response.apikey)
           router.push({
             pathname: '/',
