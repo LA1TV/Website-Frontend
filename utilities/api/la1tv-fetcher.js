@@ -12,7 +12,7 @@ const la1tvFetcher = async ({ url, method = 'GET', formData = false, parser = da
       params.append(key, formData[key])
     }
   }
-  
+
   try {
     const la1tv = await fetch(requestUrl, {
       method: method,
@@ -20,7 +20,7 @@ const la1tvFetcher = async ({ url, method = 'GET', formData = false, parser = da
         'Content-Type': 'application/json',
         'X-Api-Key': process.env.LA1TV_API_KEY || config.env.LA1TV_API_KEY
       },
-      body: JSON.stringify( formData )
+      body: JSON.stringify(formData)
     })
 
     response = await la1tv.json()

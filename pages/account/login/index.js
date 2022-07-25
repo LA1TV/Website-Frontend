@@ -11,6 +11,7 @@ import { useRouter } from 'next/router'
 const Index = () => {
   const emailState = inputState()
   const router = useRouter()
+  // router.prefetch('/account/login/enterCode')
   return <>
     <Heading>Login</Heading>
     <TextField label="Email" {...emailState}></TextField>
