@@ -12,3 +12,16 @@ module.exports.inputState = (defaultValue = '') => {
     onChange
   }
 }
+
+module.exports.fileState = () => {
+  const [value, setValue] = React.useState()
+
+  function onChange (e) {
+    setValue(e.target.files[0])
+  }
+
+  return {
+    value,
+    onChange
+  }
+}

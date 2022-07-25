@@ -1,27 +1,25 @@
 import fetch from 'isomorphic-unfetch'
 import config from '../../config.json'
 
-const la1tvFetcher = async ({ url, method = 'GET', formData = false, parser = data => data }) => {
+const la1tvFetcher = async ({ url, method = 'GET', formData = false, apikey = null, parser = data => data }) => {
   const requestUrl = (process.env.LA1TV_API_ENDPOINT || config.env.LA1TV_API_ENDPOINT) + url
+
+  if (apikey === null) {
+    apikey = process.env.LA1TV_API_KEY || config.env.LA1TV_API_KEY
+  }
 
   let response, statusCode
 
-  const params = new URLSearchParams()
-  if (formData) {
-    for (const key in formData) {
-      params.append(key, formData[key])
-    }
-  }
-
   try {
-    const la1tv = await fetch(requestUrl, {
+    const opts = {
       method: method,
       headers: {
         'Content-Type': 'application/json',
-        'X-Api-Key': process.env.LA1TV_API_KEY || config.env.LA1TV_API_KEY
-      },
-      body: JSON.stringify(formData)
-    })
+        'X-Api-Key': apikey
+      }
+    }
+    if (formData) { opts.body = JSON.stringify(formData) }
+    const la1tv = await fetch(requestUrl, opts)
 
     response = await la1tv.json()
     statusCode = la1tv.status
