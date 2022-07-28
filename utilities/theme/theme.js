@@ -12,6 +12,8 @@ const theme = {
     background: '#000000',
     navBackground: '#1e1e1e',
     primary: '#f9f9f9',
+    secondary: '#ff99aa',
+    secondaryHighlight: '#ffbbcc',
     accent: '#bb0022'
   }
 }

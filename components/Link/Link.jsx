@@ -3,15 +3,17 @@ import styled from 'styled-components'
 import React from 'react'
 
 const StyledLink = styled.a`
-  text-decoration: none;
-  color: ${({ theme }) => theme.color.primary};
+  text-decoration: blink;
+  color: ${({ theme }) => theme.color.secondary};
+  text-decoration:underline;
+  text-decoration-color: ${({ theme }) => theme.color.accent};
 
   :hover,
   :active {
     cursor: pointer;
-    color: ${({ theme }) => theme.color.accent};
+    color: ${({ theme }) => theme.color.secondaryHighlight};
     text-decoration: underline;
-    text-decoration-color: ${({ theme }) => theme.color.primary};
+    text-decoration-color: ${({ theme }) => theme.color.secondaryHighlight};
   }
 `
 
