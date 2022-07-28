@@ -13,11 +13,12 @@ module.exports.inputState = (defaultValue = '') => {
   }
 }
 
-module.exports.fileState = () => {
+module.exports.fileState = (callback = undefined) => {
   const [value, setValue] = React.useState()
 
   function onChange (e) {
     setValue(e.target.files[0])
+    if (callback !== undefined) callback(e)
   }
 
   return {

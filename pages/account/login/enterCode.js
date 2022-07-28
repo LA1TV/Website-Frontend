@@ -11,7 +11,7 @@ import { useRouter } from 'next/router'
 const CodePage = () => {
   const codeState = inputState()
   const router = useRouter()
-  const { message } = router.query
+  const { message, callback } = router.query
   return <>
     <Heading>Enter the code emailed to you</Heading>
     <Paragraph>{message}</Paragraph>
@@ -32,7 +32,7 @@ const CodePage = () => {
           // eslint-disable-next-line no-undef
           sessionStorage.setItem('apikey', response.apikey)
           router.push({
-            pathname: '/',
+            pathname: (callback !== undefined) ? callback : '/',
             query: { justLoggedIn: true }
           })
         }

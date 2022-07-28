@@ -11,6 +11,7 @@ import { useRouter } from 'next/router'
 const Index = () => {
   const emailState = inputState()
   const router = useRouter()
+  const { callback } = router.query
   // router.prefetch('/account/login/enterCode')
   return <>
     <Heading>Login</Heading>
@@ -28,9 +29,14 @@ const Index = () => {
           message = 'We just emailed your code to you, it\'ll be there within 30 seconds.'
         }
 
+        const query = { message: message }
+        if (callback !== undefined) {
+          query.callback = callback
+        }
+
         router.push({
           pathname: '/account/login/enterCode',
-          query: { message: message }
+          query: query
         })
       }
     } text="Login" />

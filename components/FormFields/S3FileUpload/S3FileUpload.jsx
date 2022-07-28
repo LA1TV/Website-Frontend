@@ -7,28 +7,25 @@ import fetch from 'isomorphic-unfetch'
 import config from '../.././../config.json'
 import { fileState } from 'utilities/hooks'
 
-async function getPUT (apikey, bucket, file) {
-  const res = await fetch(`${config.env.FRONTEND_DOMAIN}/api/s3?bucket=${bucket}&file=${encodeURIComponent(file.name)}`, {
+async function getPUT (apikey, bucket, filename) {
+  const res = await fetch(`${config.env.FRONTEND_DOMAIN}/api/s3?bucket=${bucket}&file=${encodeURIComponent(filename)}`, {
     method: 'POST',
     headers: { 'x-api-key': apikey }
   })
   return await res.json()
 }
 
-const S3FileUpload = ({ label, s3bucket }) => {
-  const file = fileState()
+const S3FileUpload = ({ label, s3bucket, onChange }) => {
   // const [isFilePicked, setIsFilePicked] = useState(false)
   const { apikey } = React.useContext(AuthContext)
-  const [status, setStatus] = React.useState('Select a file to upload')
 
-  const changeHandler = (event) => {
-    // setIsSelected(true);
-    beginUpload()
-  }
+  const [status, setStatus] = React.useState('Select a file to upload')
+  const file = fileState()
 
   const beginUpload = () => {
     setStatus('Getting authorisation to upload...')
-    getPUT(apikey, s3bucket, file.value).then((res) => {
+    getPUT(apikey, s3bucket, file.value.name).then((res) => {
+      onChange({ target: { value: '' } })
       console.log(res)
       const url = res.PUTurl
 
@@ -54,6 +51,7 @@ const S3FileUpload = ({ label, s3bucket }) => {
       })
       xhr.upload.addEventListener('load', function () {
         setStatus('Your file is stored on M3!')
+        onChange({ target: { value: file.value.name } })
       })
 
       xhr.open('PUT', url)
@@ -62,11 +60,18 @@ const S3FileUpload = ({ label, s3bucket }) => {
     })
   }
 
+  React.useEffect(() => {
+    if (file.value !== undefined) {
+      beginUpload()
+    }
+  }, [file.value])
+
   return (
-    <span>
-      <FileUpload label={label} {...file} /><Button text="Upload" onClick={changeHandler}/>
+    <div>
+      <FileUpload label={label} {...file} />&nbsp;
+      <Button text="Upload" onClick={beginUpload}/>
       <Paragraph>{status}</Paragraph>
-    </span>
+    </div>
   )
 }
 

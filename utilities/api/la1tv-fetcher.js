@@ -28,7 +28,7 @@ const la1tvFetcher = async ({ url, method = 'GET', formData = false, apikey = nu
     console.error(error)
     return {
       statusCode: 404,
-      body: 'Not found'
+      responseBody: 'Not found'
     }
   }
 
@@ -36,13 +36,13 @@ const la1tvFetcher = async ({ url, method = 'GET', formData = false, apikey = nu
     console.log('Got nothing')
     return {
       statusCode: 404,
-      body: 'Not found'
+      responseBody: 'Not found'
     }
   }
 
   return {
     statusCode: statusCode,
-    body: parser(response)
+    responseBody: parser(response)
   }
 }
 

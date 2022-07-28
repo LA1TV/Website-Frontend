@@ -11,9 +11,9 @@ const parseResponse = ({ name, description, thumbnailS3Bucket, thumbnailS3Object
 const handle = async ({ query: { videoId } }, res) => {
   const url = `/v1/video/${videoId}`
 
-  const { statusCode, body } = await la1tvFetcher({ url, parser: parseResponse })
+  const { statusCode, responseBody } = await la1tvFetcher({ url, parser: parseResponse })
 
-  res.status(statusCode).end(JSON.stringify(body))
+  res.status(statusCode).end(JSON.stringify(responseBody))
 }
 
 export default handle
