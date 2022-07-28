@@ -17,7 +17,7 @@ const Index = () => {
     <TextField label="Email" {...emailState}></TextField>
     <Button onClick={
       async function () {
-        const res = await fetch(`${config.env.FRONTEND_DOMAIN}/api/account/login?email=${emailState.value}`)
+        const res = await fetch(`${config.env.FRONTEND_DOMAIN}/api/account/login?email=${emailState.value}&t=${Date.now()}`)
 
         const statusCode = res.status
 
