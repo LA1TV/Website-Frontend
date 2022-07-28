@@ -2,13 +2,16 @@ import React from 'react'
 import Paragraph from 'components/Paragraph'
 import VideoLink from 'components/VideoLink'
 import Row from '../layouts/Row'
+import RecommendationsRow from '../components/RecommendationsRow'
+import Heading from '../components/Heading'
 
 const Index = () => (<>
-  <Paragraph>Hello Next.js</Paragraph>
-  <Row recursive>
-    <VideoLink title="test" description="test" poster="http://localhost:8000/v1/s3/thumbnails/good%20owl.jpg" link="/watch/1/" />
-    <VideoLink title="test2" description="test2" poster="http://localhost:8000/v1/s3/thumbnails/good%20owl.jpg" link="/watch/1/"/>
-  </Row>
+  <Heading>Welcome to LA1TV on-demand!</Heading>
+  <Paragraph>We're Lancaster University's student TV station, producing content for you to enjoy
+    and engage with your university. Have a browse, find something you like, or try something new!
+    </Paragraph>
+  <Heading type="h2">Watch something new:</Heading>
+  <RecommendationsRow count={6} type="latest"></RecommendationsRow>
 </>
 )
 
