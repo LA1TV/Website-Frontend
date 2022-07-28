@@ -9,7 +9,7 @@ const Index = () => (<>
   <Heading>Welcome to LA1TV on-demand!</Heading>
   <Paragraph>We're Lancaster University's student TV station, producing content for you to enjoy
     and engage with your university. Have a browse, find something you like, or try something new!
-    </Paragraph>
+  </Paragraph>
   <Heading type="h2">Watch something new:</Heading>
   <RecommendationsRow count={6} type="latest"></RecommendationsRow>
 </>

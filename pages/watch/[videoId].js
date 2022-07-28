@@ -25,7 +25,7 @@ const Post = ({ name, description, Streamables, thumbnailS3Bucket, thumbnailS3Ob
         streamables={Streamables}
         poster={`${process.env.LA1TV_API_ENDPOINT || config.env.LA1TV_API_ENDPOINT}/v1/s3/${thumbnailS3Bucket}/${thumbnailS3Object}`}
       />
-      <Sidebar left={left} right={right} />
+      <Sidebar left={left} right={right} sidebarOnRight minWidth="50%" sidebarWidth="22rem"/>
     </Center>
   )
 }
