@@ -3,7 +3,7 @@ import { la1tvFetcher } from 'utilities/api'
 const handle = async (req, res) => {
   const url = '/v1/video'
   const apikey = req.headers['x-api-key']
-  const body = JSON.parse
+  const body = req.body
 
   const { statusCode, responseBody } = await la1tvFetcher({
     url,
@@ -15,7 +15,7 @@ const handle = async (req, res) => {
           description: body.description,
           thumbnailS3Bucket: body.thumbnailBucket,
           thumbnailS3Object: body.thumbnailObject,
-          releaseDate: 0,
+          releaseDate: body.releaseDate,
           streamables: [
             {
               name: 'Original',
@@ -27,7 +27,7 @@ const handle = async (req, res) => {
   }
   )
   console.log(statusCode, responseBody)
-  console.log("HERE")
+  console.log('HERE')
   res.status(statusCode).end(JSON.stringify(responseBody))
 }
 

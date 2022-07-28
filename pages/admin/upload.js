@@ -22,11 +22,11 @@ const Index = () => {
   const timeState = inputState(Date.now())
   const router = useRouter()
 
-  const save = async function (apikey, title, description, thumbnailBucket, thumbnailObject, videoBucket, videoObject) {
+  const save = async function (apikey, title, description, thumbnailBucket, thumbnailObject, videoBucket, videoObject, releaseDate) {
     const res = await fetch(`${config.env.FRONTEND_DOMAIN}/api/admin/upload`, {
       method: 'POST',
       headers: { 'x-api-key': apikey, 'Content-Type': 'application/json' },
-      body: JSON.stringify({ title, description, thumbnailBucket, thumbnailObject, videoBucket, videoObject })
+      body: JSON.stringify({ title, description, thumbnailBucket, thumbnailObject, videoBucket, videoObject, releaseDate })
     })
     return await res.json()
   }
@@ -48,11 +48,12 @@ const Index = () => {
           titleState.value === '' ||
             descriptionState.value === '' ||
             thumbnailObjectState.value === '' ||
-            videoObjectState.value === ''
+            videoObjectState.value === '' ||
+            isNaN(timeState.value)
         }
         onClick={async function () {
           const res = await save(value.apikey, titleState.value, descriptionState.value,
-            thumbnailBucket, thumbnailObjectState.value, videoBucket, videoObjectState.value)
+            thumbnailBucket, thumbnailObjectState.value, videoBucket, videoObjectState.value, timeState.value);
           router.push('/watch/' + res.id)
         }}></Button>
     </>}</AuthContext.Consumer>
