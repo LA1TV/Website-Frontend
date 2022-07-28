@@ -10,7 +10,12 @@ const AuthenticatedArea = ({ children, forceLogin = false }) => {
     // eslint-disable-next-line no-undef
     APIKey = sessionStorage.getItem('apikey')
     if (forceLogin && APIKey === null) {
-      router.push('/account/login')
+      router.push({
+        pathname: '/account/login',
+        query: {
+          callback: router.asPath
+        }
+      })
     }
     setApikey(APIKey)
   }, [])

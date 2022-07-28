@@ -25,7 +25,7 @@ const Index = () => {
   const save = async function (apikey, title, description, thumbnailBucket, thumbnailObject, videoBucket, videoObject) {
     const res = await fetch(`${config.env.FRONTEND_DOMAIN}/api/admin/upload`, {
       method: 'POST',
-      headers: { 'x-api-key': apikey, 'Content-Type': 'application/json'},
+      headers: { 'x-api-key': apikey, 'Content-Type': 'application/json' },
       body: JSON.stringify({ title, description, thumbnailBucket, thumbnailObject, videoBucket, videoObject })
     })
     return await res.json()
@@ -40,7 +40,7 @@ const Index = () => {
       <S3FileUpload label="Video" s3bucket={videoBucket} {...videoObjectState}/>
       <TextField label="Release Time, in Unix Epoch" {...timeState}></TextField>
       <Paragraph>A proper date/time picker will be implemented Soon™. In the meantime, you can use a
-          Unix Epoch. <span style={{textDecoration: "underline white", fontWeight: 'bold'}}>You must use one with millisecond precision.</span> Or just leave it as-is
+          Unix Epoch. <span style={{ textDecoration: 'underline white', fontWeight: 'bold' }}>You must use one with millisecond precision.</span> Or just leave it as-is
           to release immediately.
       </Paragraph>
       <Button text="Save"
