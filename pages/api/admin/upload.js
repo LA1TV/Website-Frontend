@@ -15,7 +15,7 @@ const handle = async (req, res) => {
           description: body.description,
           thumbnailS3Bucket: body.thumbnailBucket,
           thumbnailS3Object: body.thumbnailObject,
-          releaseDate: body.releaseDate,
+          releaseDate: parseInt(body.releaseDate),
           streamables: [
             {
               name: 'Original',

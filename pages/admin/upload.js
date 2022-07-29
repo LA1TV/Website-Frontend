@@ -19,7 +19,7 @@ const Index = () => {
   const thumbnailBucket = 'thumbnails'
   const videoObjectState = inputState()
   const videoBucket = 'videos'
-  const timeState = inputState(Date.now())
+  const timeState = inputState(Date.now().toString())
   const router = useRouter()
 
   const save = async function (apikey, title, description, thumbnailBucket, thumbnailObject, videoBucket, videoObject, releaseDate) {
