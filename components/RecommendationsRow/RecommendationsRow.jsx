@@ -1,9 +1,10 @@
 import React from 'react'
-import VideoLink from '../VideoLink'
+import VideoLink, { VideoLinkSkeleton } from '../VideoLink'
 import Row from 'layouts/Row'
 import fetch from 'isomorphic-unfetch'
 import config from '../../config'
 import styled from 'styled-components'
+import Paragraph from 'components/Paragraph'
 
 const StyledDiv = styled.div`
 min-height: 10vh
@@ -19,7 +20,10 @@ const chunkArray = function (arr, chunkSize) {
 }
 const RecommendationsRow = ({ type, columns, rows = 1, page = 1, loadedCallback = (isFinalPage) => {} }) => {
   const [recommendations, setRecommendations] = React.useState([])
-  // const [page, setPage] = React.useState(1)
+  const skeletons = []
+  for (let i = 0; i < columns; i++) {
+    skeletons.push(<VideoLinkSkeleton></VideoLinkSkeleton>)
+  }
 
   const loadRecommendations = function (page) {
     fetch(`${config.env.FRONTEND_DOMAIN}/api/recommendations/${type}?page=${page}&count=${rows * columns}`).then((response) => {
@@ -35,9 +39,14 @@ const RecommendationsRow = ({ type, columns, rows = 1, page = 1, loadedCallback 
   React.useEffect(() => loadRecommendations(page), [page, columns, rows])
   React.useEffect(() => loadRecommendations(page), [])
 
-  return recommendations.length === 0 ? null : (
-    <StyledDiv>
-      {recommendations.map((chunk, index) =>
+  return <StyledDiv>
+    {recommendations.length === 0
+      ? <Row recursive count={columns}>
+        {skeletons.map((s, index) => <span key={index}>
+          {s}
+        </span>)}
+      </Row>
+      : recommendations.map((chunk, index) =>
         <Row recursive key={index} count={columns}>
           {chunk.map((r) => <span key={r.id}>
             <VideoLink
@@ -48,8 +57,9 @@ const RecommendationsRow = ({ type, columns, rows = 1, page = 1, loadedCallback 
             ></VideoLink>
           </span>)}
         </Row>
-      )}
-    </StyledDiv>)
+      )
+    }
+  </StyledDiv>
 }
 
 export default RecommendationsRow

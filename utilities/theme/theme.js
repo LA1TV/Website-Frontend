@@ -15,7 +15,8 @@ const theme = {
     primary: '#f9f9f9',
     secondary: '#ff99aa',
     secondaryHighlight: '#ffbbcc',
-    accent: '#bb0022'
+    accent: '#bb0022',
+    skeleton: '#771111'
   }
 }
 

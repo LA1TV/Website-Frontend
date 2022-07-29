@@ -7,6 +7,8 @@ import Link from '../Link'
 const StyledImg = styled.img`
   width: 100%;
   position: relative;
+  aspect-ratio: 16/9;
+  background-color:${({ theme }) => theme.color.skeleton};
   top: 0;
   left: 0;
 `
