@@ -6,7 +6,7 @@ const StyledRow = styled.div`
   > * {
     margin-left: 0;
     margin-right: 0;
-    width: ${({ n }) => (100 / n - 1)}%;
+    width: ${({ n, theme }) => `calc((100%/${n}) - (${theme.spacing.base}/(${n}/${n-1})))`};
 } 
 
   ${({ theme, recursive }) => recursive
@@ -27,8 +27,8 @@ const StyledRow = styled.div`
 }
 `
 
-const Row = ({ children, recursive }) => (
-  <StyledRow recursive={recursive} n={children.length}>
+const Row = ({ children, recursive, count = 'auto' }) => (
+  <StyledRow recursive={recursive} n={count === 'auto' ? children.length : count}>
     {children.map((child, key) => <div style={{ display: 'inline-block' }} key={key}>{child}</div>)}
   </StyledRow>
 )

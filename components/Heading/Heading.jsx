@@ -4,7 +4,8 @@ import styled from 'styled-components'
 const size = {
   h1: 4.5,
   h2: 3,
-  h3: 2
+  h3: 2,
+  h4: 1.8
 }
 
 const StyledHeading = ({ type }) => styled(type)`

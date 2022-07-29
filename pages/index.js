@@ -11,7 +11,7 @@ const Index = () => (<>
     and engage with your university. Have a browse, find something you like, or try something new!
   </Paragraph>
   <Heading type="h2">Watch something new:</Heading>
-  <RecommendationsRow count={6} type="latest"></RecommendationsRow>
+  <RecommendationsRow columns={5} type="latest"></RecommendationsRow>
 </>
 )
 
