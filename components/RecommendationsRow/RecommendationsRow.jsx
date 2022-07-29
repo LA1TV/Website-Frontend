@@ -1,20 +1,14 @@
 import React from 'react'
-import styled from 'styled-components'
 import VideoLink from '../VideoLink'
 import Row from 'layouts/Row'
 import fetch from 'isomorphic-unfetch'
 import config from '../../config'
+import styled from 'styled-components'
 
-const StyledImg = styled.img`
-  width: 100%;
-  position: relative;
-  top: 0;
-  left: 0;
+const StyledDiv = styled.div`
+min-height: 10vh
 `
 
-const StyledVideoLinkDiv = styled.div`
-  position: relative;
-`
 const chunkArray = function (arr, chunkSize) {
   const result = []
   for (let i = 0; i < arr.length; i += chunkSize) {
@@ -23,9 +17,9 @@ const chunkArray = function (arr, chunkSize) {
   }
   return result
 }
-const RecommendationsRow = ({ type, columns, rows = 1 }) => {
+const RecommendationsRow = ({ type, columns, rows = 1, page = 1, loadedCallback = (isFinalPage) => {} }) => {
   const [recommendations, setRecommendations] = React.useState([])
-  const [page, setPage] = React.useState(1)
+  // const [page, setPage] = React.useState(1)
 
   const loadRecommendations = function (page) {
     fetch(`${config.env.FRONTEND_DOMAIN}/api/recommendations/${type}?page=${page}&count=${rows * columns}`).then((response) => {
@@ -33,14 +27,15 @@ const RecommendationsRow = ({ type, columns, rows = 1 }) => {
         const recommend = chunkArray(res, columns)
         setRecommendations(recommend)
         console.log(recommend)
+        loadedCallback(res.length < (rows * columns))
       })
     })
   }
 
-  React.useEffect(() => loadRecommendations(page), [page])
+  React.useEffect(() => loadRecommendations(page), [page, columns, rows])
 
   return recommendations.length === 0 ? null : (
-    <>
+    <StyledDiv>
       {recommendations.map((chunk, index) =>
         <Row recursive key={index} count={columns}>
           {chunk.map((r) => <span key={r.id}>
@@ -53,7 +48,7 @@ const RecommendationsRow = ({ type, columns, rows = 1 }) => {
           </span>)}
         </Row>
       )}
-    </>)
+    </StyledDiv>)
 }
 
 export default RecommendationsRow

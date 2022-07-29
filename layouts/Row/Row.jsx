@@ -6,7 +6,7 @@ const StyledRow = styled.div`
   > * {
     margin-left: 0;
     margin-right: 0;
-    width: ${({ n, theme }) => `calc((100%/${n}) - (${theme.spacing.base}/(${n}/${n-1})))`};
+    width: ${({ n, theme }) => `calc((100%/${n}) - (${theme.spacing.base}/(${n}/${n - 1})))`};
 } 
 
   ${({ theme, recursive }) => recursive
