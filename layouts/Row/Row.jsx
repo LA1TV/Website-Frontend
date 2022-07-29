@@ -27,9 +27,14 @@ const StyledRow = styled.div`
 }
 `
 
+const StyledDiv = styled.div`
+display: inline-block;
+vertical-align: top;
+`
+
 const Row = ({ children, recursive, count = 'auto' }) => (
   <StyledRow recursive={recursive} n={count === 'auto' ? children.length : count}>
-    {children.map((child, key) => <div style={{ display: 'inline-block' }} key={key}>{child}</div>)}
+    {children.map((child, key) => <StyledDiv key={key}>{child}</StyledDiv>)}
   </StyledRow>
 )
 

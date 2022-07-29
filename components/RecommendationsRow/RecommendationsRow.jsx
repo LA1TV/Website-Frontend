@@ -33,6 +33,7 @@ const RecommendationsRow = ({ type, columns, rows = 1, page = 1, loadedCallback 
   }
 
   React.useEffect(() => loadRecommendations(page), [page, columns, rows])
+  React.useEffect(() => loadRecommendations(page), [])
 
   return recommendations.length === 0 ? null : (
     <StyledDiv>
