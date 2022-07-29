@@ -53,7 +53,7 @@ const Index = () => {
         }
         onClick={async function () {
           const res = await save(value.apikey, titleState.value, descriptionState.value,
-            thumbnailBucket, thumbnailObjectState.value, videoBucket, videoObjectState.value, timeState.value);
+            thumbnailBucket, thumbnailObjectState.value, videoBucket, videoObjectState.value, timeState.value)
           router.push('/watch/' + res.id)
         }}></Button>
     </>}</AuthContext.Consumer>

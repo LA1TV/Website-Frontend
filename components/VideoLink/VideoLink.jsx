@@ -22,8 +22,8 @@ const VideoLink = ({ className, title, description, poster, link }) => (
     <Link href={link}>
       <span>
         <StyledImg src={poster} />
-        <Heading type="h4">{title}</Heading>
-        <Paragraph>{description}</Paragraph>
+        <Heading type="h4" overflowLine={2}>{title}</Heading>
+        <Paragraph overflowLine={3}>{description}</Paragraph>
       </span>
     </Link>
   </StyledVideoLinkDiv>

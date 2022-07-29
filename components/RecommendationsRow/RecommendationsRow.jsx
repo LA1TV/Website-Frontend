@@ -4,7 +4,6 @@ import Row from 'layouts/Row'
 import fetch from 'isomorphic-unfetch'
 import config from '../../config'
 import styled from 'styled-components'
-import Paragraph from 'components/Paragraph'
 
 const StyledDiv = styled.div`
 min-height: 10vh

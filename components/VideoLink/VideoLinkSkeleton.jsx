@@ -1,8 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import Heading from '../Heading'
-import Paragraph from '../Paragraph'
-import Link from '../Link'
 
 const randomNumber = (min, max) => {
   return Math.floor(
