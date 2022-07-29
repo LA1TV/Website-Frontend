@@ -1,16 +1,17 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const StyledP = styled.p`
-  color: ${({ theme }) => theme.color.primary};
+const StyledP = ({ smallprint }) => styled.p`
   margin-bottom: ${({ theme }) => theme.spacing.full};
-  font-size: 1rem;
+  color: ${smallprint ? '#999999' : ({ theme }) => theme.color.primary};
+  font-size: ${smallprint ? '0.7' : '1'}rem;
 `
 
-const Paragraph = ({ children }) => (
-  <StyledP>
+const Paragraph = ({ smallprint = false, children }) => {
+  const StyledPConfigured = StyledP({ smallprint })
+  return (<StyledPConfigured>
     {children}
-  </StyledP>
-)
+  </StyledPConfigured>)
+}
 
 export default Paragraph

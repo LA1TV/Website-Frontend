@@ -15,7 +15,7 @@ const RecommendationsRow = React.lazy(() => import('components/RecommendationsRo
 
 const columns = 1
 
-const Index = ({type}) => {
+const Index = ({ type }) => {
   const [rows, setRows] = React.useState([])
 
   const addRow = () => {
@@ -46,7 +46,7 @@ const Index = ({type}) => {
 }
 
 Index.getInitialProps = async ({ query: { type } }) => {
-  return {type}
+  return { type }
 }
 
 export default Index

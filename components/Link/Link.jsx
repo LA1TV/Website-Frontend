@@ -4,7 +4,6 @@ import React from 'react'
 
 const StyledLink = styled.a`
   text-decoration: blink;
-  color: ${({ theme }) => theme.color.secondary};
   text-decoration:underline;
   text-decoration-color: ${({ theme }) => theme.color.accent};
 

@@ -3,6 +3,7 @@ import React from 'react'
 import { ThemeProvider, createGlobalStyle } from 'styled-components'
 import theme from 'utilities/theme'
 import Navigation from 'components/Navigation'
+import Footer from 'components/Footer'
 import globalCss from 'utilities/global-css'
 import Head from 'next/head'
 
@@ -24,6 +25,7 @@ class AppWrapper extends App {
         <Navigation>
           <GlobalCSS />
           <Component {...pageProps} />
+          <Footer></Footer>
         </Navigation>
       </ThemeProvider>
     )
