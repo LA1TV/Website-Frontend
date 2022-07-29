@@ -13,7 +13,7 @@ const descriptions = {
 
 const RecommendationsRow = React.lazy(() => import('components/RecommendationsRow'))
 
-const columns = 1
+const columns = 5
 
 const Index = ({ type }) => {
   const [rows, setRows] = React.useState([])
@@ -24,7 +24,7 @@ const Index = ({ type }) => {
         const newRows = []
         const loopCount = Math.floor(res.count / columns)
         for (let i = 0; i < loopCount; i++) {
-          newRows.push(<RecommendationsRow columns={5} page={i + 1} type='latest'></RecommendationsRow>)
+          newRows.push(<RecommendationsRow columns={columns} page={i + 1} type='latest'></RecommendationsRow>)
         }
         setRows(newRows)
       })
