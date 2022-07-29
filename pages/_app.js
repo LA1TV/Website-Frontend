@@ -6,6 +6,7 @@ import Navigation from 'components/Navigation'
 import Footer from 'components/Footer'
 import globalCss from 'utilities/global-css'
 import Head from 'next/head'
+import config from '../config.json'
 
 class AppWrapper extends App {
   render () {
@@ -20,6 +21,8 @@ class AppWrapper extends App {
       <ThemeProvider theme={theme}>
         <Head>
           <title>LA1TV</title>
+          <link rel="preconnect" href={config.env.LA1TV_API_ENDPOINT} />
+          <link rel="preconnect" href={config.env.S3_DOMAIN} />
           <meta name="viewport" content="initial-scale=1.0, width=devide-width" />
         </Head>
         <Navigation>
