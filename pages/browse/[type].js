@@ -22,7 +22,7 @@ const Index = ({ type }) => {
     fetch(`${config.env.FRONTEND_DOMAIN}/api/recommendations/${type}?funct=count`).then((response) => {
       response.json().then((res) => {
         const newRows = []
-        const loopCount = Math.floor(res.count / columns)
+        const loopCount = Math.floor(res.count / columns) + 1
         for (let i = 0; i < loopCount; i++) {
           newRows.push(<RecommendationsRow columns={columns} page={i + 1} type='latest'></RecommendationsRow>)
         }
