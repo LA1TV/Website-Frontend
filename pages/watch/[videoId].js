@@ -8,7 +8,7 @@ import Heading from 'components/Heading'
 import Error from 'next/error'
 import config from '../../config.json'
 
-const Post = ({ name, description, Streamables, thumbnailS3Bucket, thumbnailS3Object, statusCode }) => {
+const Post = ({ name, description, Streamables, thumbnailS3Bucket, thumbnailS3Object, statusCode, releaseDate }) => {
   if (statusCode !== 200) return <Error statusCode={statusCode} />
 
   const right = <></>
@@ -27,7 +27,7 @@ const Post = ({ name, description, Streamables, thumbnailS3Bucket, thumbnailS3Ob
     thumbnailUrl: [
       `https://m3.la1tv.co.uk/${thumbnailS3Bucket}/${thumbnailS3Object}`
     ],
-    // uploadDate: '2016-03-31T08:00:00+08:00',
+    uploadDate: releaseDate,
     // duration: 'PT16M06S',
     contentUrl: `https://m3.la1tv.co.uk/${Streamables[0].s3Bucket}/${Streamables[0].s3Object}`,
     regionsAllowed: 'GB'

@@ -1,11 +1,12 @@
 import { la1tvFetcher } from 'utilities/api'
 
-const parseResponse = ({ name, description, thumbnailS3Bucket, thumbnailS3Object, Streamables }) => ({
+const parseResponse = ({ name, description, thumbnailS3Bucket, thumbnailS3Object, Streamables, releaseDate }) => ({
   name,
   description,
   thumbnailS3Bucket,
   thumbnailS3Object,
-  Streamables
+  Streamables,
+  releaseDate
 })
 
 const handle = async ({ query: { videoId } }, res) => {
