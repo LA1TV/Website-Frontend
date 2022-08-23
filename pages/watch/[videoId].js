@@ -19,14 +19,34 @@ const Post = ({ name, description, Streamables, thumbnailS3Bucket, thumbnailS3Ob
       <Paragraph>{description}</Paragraph>
     </>
 
+  const jsonld = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'VideoObject',
+    name: name,
+    description: description,
+    thumbnailUrl: [
+      `https://m3.la1tv.co.uk/${thumbnailS3Bucket}/${thumbnailS3Object}`
+    ],
+    // uploadDate: '2016-03-31T08:00:00+08:00',
+    // duration: 'PT16M06S',
+    contentUrl: `https://m3.la1tv.co.uk/${Streamables[0].s3Bucket}/${Streamables[0].s3Object}`,
+    regionsAllowed: 'GB'
+  })
+
   return (
-    <Center>
-      <VideoDisplay
-        streamables={Streamables}
-        poster={`${process.env.LA1TV_API_ENDPOINT || config.env.LA1TV_API_ENDPOINT}/v1/s3/${thumbnailS3Bucket}/${thumbnailS3Object}`}
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: jsonld }}
       />
-      <Sidebar left={left} right={right} sidebarOnRight minWidth="50%" sidebarWidth="22rem"/>
-    </Center>
+      <Center>
+        <VideoDisplay
+          streamables={Streamables}
+          poster={`${process.env.LA1TV_API_ENDPOINT || config.env.LA1TV_API_ENDPOINT}/v1/s3/${thumbnailS3Bucket}/${thumbnailS3Object}`}
+        />
+        <Sidebar left={left} right={right} sidebarOnRight minWidth="50%" sidebarWidth="22rem"/>
+      </Center>
+    </>
   )
 }
 
