@@ -41,7 +41,7 @@
     "react-dom": "^18.2.0",
     "redux": "^4.2.0",
     "styled-components": "^4.4.0",
-    "video-react": "^0.15.0"
+    "video.js": "^7.20.3"
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",
