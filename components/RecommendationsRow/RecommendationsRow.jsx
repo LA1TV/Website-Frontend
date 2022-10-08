@@ -51,7 +51,7 @@ const RecommendationsRow = ({ type, columns, rows = 1, page = 1, loadedCallback 
             <VideoLink
               title={r.name}
               description={r.description}
-              poster={`${config.env.LA1TV_API_ENDPOINT}/v1/s3/${r.thumbnailS3Bucket}/${r.thumbnailS3Object}`}
+              poster={`${config.env.S3_DOMAIN}/${r.thumbnailS3Bucket}/${r.thumbnailS3Object}`}
               link={`/watch/${r.id}`}
             ></VideoLink>
           </span>)}
