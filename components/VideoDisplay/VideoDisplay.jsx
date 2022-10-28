@@ -19,7 +19,7 @@ const StyledVideoDisplayDiv = styled.div`
 
 const VideoDisplay = ({ className, streamables, poster }) => {
   const newSources = streamables.map((streamable, key) => {
-    return { src: `${process.env.LA1TV_API_ENDPOINT || config.env.LA1TV_API_ENDPOINT}/v1/s3/${streamable.s3Bucket}/${streamable.s3Object}`, type: "video/mp4" }
+    return { src: `${process.env.S3_DOMAIN || config.env.S3_DOMAIN}/${streamable.s3Bucket}/${streamable.s3Object}`, type: 'application/x-mpegURL' }
   })
   const videoJsOptions = {
     autoplay: true,
@@ -28,7 +28,7 @@ const VideoDisplay = ({ className, streamables, poster }) => {
   }
   return (
     <StyledVideoDisplayDiv>
-      <StyledPlayer {...videoJsOptions} fluid={false} responsive={true} fill={true} />
+      <StyledPlayer {...videoJsOptions} fluid={false} responsive={true} fill={true} autoplay={false}/>
     </StyledVideoDisplayDiv>
   )
 }

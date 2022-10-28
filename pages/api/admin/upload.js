@@ -16,13 +16,10 @@ const handle = async (req, res) => {
           thumbnailS3Bucket: body.thumbnailBucket,
           thumbnailS3Object: body.thumbnailObject,
           releaseDate: parseInt(body.releaseDate),
-          streamables: [
-            {
-              name: 'Original',
-              s3Bucket: body.videoBucket,
-              s3Object: body.videoObject
-            }
-          ]
+          video: {
+            s3Bucket: body.videoBucket,
+            s3Object: body.videoObject
+          }
         }
   }
   )
