@@ -19,7 +19,7 @@ const StyledVideoDisplayDiv = styled.div`
 
 const VideoDisplay = ({ className, streamables, poster }) => {
   const newSources = streamables.map((streamable, key) => {
-    return { src: `${process.env.S3_DOMAIN || config.env.S3_DOMAIN}/${streamable.s3Bucket}/${streamable.s3Object}`, type: 'application/x-mpegURL' }
+    return { src: `${process.env.S3_DOMAIN || config.env.S3_DOMAIN}/${streamable.s3Bucket}/${streamable.s3Object}`, type: streamable.type }
   })
   const videoJsOptions = {
     autoplay: true,
