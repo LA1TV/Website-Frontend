@@ -1,1 +1,1 @@
-sudo docker run -p 3000:3000 -d website-beta-frontend yarn start
+sudo docker run -p 4000:3000 -d website-beta-frontend yarn start
