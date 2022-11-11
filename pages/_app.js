@@ -17,7 +17,6 @@ class AppWrapper extends App {
       }
     `
     const { Component, pageProps } = this.props
-    clarity.init('eh8mj0sapw')
     return (
       <ThemeProvider theme={theme}>
         <Head>
@@ -33,6 +32,10 @@ class AppWrapper extends App {
         </Navigation>
       </ThemeProvider>
     )
+  }
+
+  componentDidMount () {
+    clarity.init('eh8mj0sapw')
   }
 }
 
