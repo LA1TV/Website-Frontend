@@ -24,7 +24,8 @@ const VideoDisplay = ({ className, streamables, poster }) => {
   const videoJsOptions = {
     autoplay: true,
     controls: true,
-    sources: [newSources]
+    sources: [newSources],
+    poster: poster
   }
   return (
     <StyledVideoDisplayDiv>
