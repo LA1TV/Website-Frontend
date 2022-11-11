@@ -9356,6 +9356,11 @@ react-is@^18.0.0:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-18.2.0.tgz#199431eeaaa2e09f86427efbb4f1473edb47609b"
   integrity sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w==
 
+react-microsoft-clarity@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/react-microsoft-clarity/-/react-microsoft-clarity-1.1.2.tgz#d76611709d01231cc6b44272a82aea528425dfdb"
+  integrity sha512-89xn2gvQSO1LjrgaKBik0bBRwkebt8biWkS4K3DsdhYdJtVVYHoAa62JDE9Wth4A+Vt0DsfUeG75OfmrD7EcIA==
+
 react-refresh@^0.11.0:
   version "0.11.0"
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.11.0.tgz#77198b944733f0f1f1a90e791de4541f9f074046"

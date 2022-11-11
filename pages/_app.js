@@ -7,7 +7,7 @@ import Footer from 'components/Footer'
 import globalCss from 'utilities/global-css'
 import Head from 'next/head'
 import config from '../config.json'
-
+import { clarity } from 'react-microsoft-clarity'
 class AppWrapper extends App {
   render () {
     const GlobalCSS = createGlobalStyle`
@@ -17,6 +17,7 @@ class AppWrapper extends App {
       }
     `
     const { Component, pageProps } = this.props
+    clarity.init('eh8mj0sapw')
     return (
       <ThemeProvider theme={theme}>
         <Head>

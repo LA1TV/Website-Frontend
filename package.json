@@ -39,6 +39,7 @@
     "next": "12",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-microsoft-clarity": "^1.1.2",
     "redux": "^4.2.0",
     "styled-components": "^4.4.0",
     "video.js": "^7.20.3"
