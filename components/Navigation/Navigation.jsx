@@ -22,7 +22,9 @@ const Navigation = ({ children }) => (
   <>
     <StyledNav>
       <Center intrinsicCenter>
-        <StyledLogo src="/static/images/logo.svg" alt="LA1TV"/>
+        <a href="/">
+          <StyledLogo src="/static/images/logo.svg" alt="LA1TV"/>
+        </a>
         <StyledOrderedList>
           <NavigationLink href="/">Home</NavigationLink>
           <NavigationLink href="/browse/latest">Latest</NavigationLink>
