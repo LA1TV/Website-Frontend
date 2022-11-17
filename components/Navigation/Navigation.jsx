@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import { NavigationLink } from '../Link'
 import React from 'react'
 import Center from 'layouts/Center'
+import Link from 'next/link'
 
 const StyledNav = styled.nav`
   width: 100%;
