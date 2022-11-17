@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import { NavigationLink } from '../Link'
 import React from 'react'
 import Center from 'layouts/Center'
+import Link from 'next/link'
 
 const StyledNav = styled.nav`
   width: 100%;
@@ -22,7 +23,9 @@ const Navigation = ({ children }) => (
   <>
     <StyledNav>
       <Center intrinsicCenter>
-        <StyledLogo src="/static/images/logo.svg" alt="LA1TV"/>
+        <Link href="/">
+          <StyledLogo src="/static/images/logo.svg" alt="LA1TV"/>
+        </Link>
         <StyledOrderedList>
           <NavigationLink href="/">Home</NavigationLink>
           <NavigationLink href="/browse/latest">Latest</NavigationLink>
