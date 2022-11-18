@@ -11,6 +11,8 @@ const StyledNav = styled.nav`
 `
 
 const StyledLogo = styled.img`
+  cursor: pointer;
+  cursor: hand;
   height: 100%;
   align-self: flex-start;
   color:${({ theme }) => theme.color.accent};
