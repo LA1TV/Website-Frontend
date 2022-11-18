@@ -8,5 +8,6 @@ cache:
 install: yarn
 script:
   #- yarn test
+  - cp config-example.json config.json
   - yarn build
   - yarn reportCoverage
