@@ -4,7 +4,7 @@
 # Runs build and test on any commits and any pull requests.
 # Builds and tests are done separately as the tests might not pass but the code may be good.
 
-name: Node.js CI
+name: Test and Build
 
 on:
   push:
@@ -38,7 +38,7 @@ jobs:
     - run: npm install --global yarn
     - run: cd $GITHUB_WORKSPACE && yarn install
     # Run the tests
-    - run: echo -e '{\n  "env"\u003A {\n    "LA1TV_API_KEY"\u003A "Insert key Here!"\n  }\n}' > $GITHUB_WORKSPACE/config.json
+    - run: cp $GITHUB_WORKSPACE/config-example.json $GITHUB_WORKSPACE/config.json
     - run: cd $GITHUB_WORKSPACE && yarn pretest
     - run: cd $GITHUB_WORKSPACE && yarn test
 
@@ -64,5 +64,5 @@ jobs:
     - run: npm install --global yarn
     - run: cd $GITHUB_WORKSPACE && yarn install
     # Run the build
-    - run: echo -e '{\n  "env"\u003A {\n    "LA1TV_API_KEY"\u003A "Insert key Here!"\n  }\n}' > $GITHUB_WORKSPACE/config.json
+    - run: cp $GITHUB_WORKSPACE/config-example.json $GITHUB_WORKSPACE/config.json
     - run: cd $GITHUB_WORKSPACE && yarn build
