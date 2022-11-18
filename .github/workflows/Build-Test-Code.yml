@@ -66,3 +66,4 @@ jobs:
     # Run the build
     - run: cp $GITHUB_WORKSPACE/config-example.json $GITHUB_WORKSPACE/config.json
     - run: cd $GITHUB_WORKSPACE && yarn build
+    - run: cd $GITHUB_WORKSPACE && yarn reportCoverage
