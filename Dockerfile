@@ -13,7 +13,7 @@ ADD . /opt/app
 RUN yarn run build
 
 # Production image, copy all the files and run next
-FROM node:14-alpine AS runner
+FROM node:16 AS runner
 WORKDIR /opt/app
 
 RUN addgroup -g 1001 -S nodejs
