@@ -1,11 +1,10 @@
 import fetch from 'isomorphic-unfetch'
-import config from '../../config.json'
 
 const la1tvFetcher = async ({ url, method = 'GET', formData = false, apikey = null, parser = data => data }) => {
-  const requestUrl = (process.env.LA1TV_API_ENDPOINT || config.env.LA1TV_API_ENDPOINT) + url
+  const requestUrl = (process.env.LA1TV_API_ENDPOINT || process.env.LA1TV_API_ENDPOINT) + url
 
   if (apikey === null) {
-    apikey = process.env.LA1TV_API_KEY || config.env.LA1TV_API_KEY
+    apikey = process.env.LA1TV_API_KEY || process.env.LA1TV_API_KEY
   }
 
   let response, statusCode
