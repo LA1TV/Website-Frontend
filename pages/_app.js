@@ -6,7 +6,6 @@ import Navigation from 'components/Navigation'
 import Footer from 'components/Footer'
 import globalCss from 'utilities/global-css'
 import Head from 'next/head'
-import config from '../config.json'
 import { clarity } from 'react-microsoft-clarity'
 class AppWrapper extends App {
   render () {
@@ -21,8 +20,8 @@ class AppWrapper extends App {
       <ThemeProvider theme={theme}>
         <Head>
           <title>LA1TV</title>
-          <link rel="preconnect" href={config.env.LA1TV_API_ENDPOINT} />
-          <link rel="preconnect" href={config.env.S3_DOMAIN} />
+          <link rel="preconnect" href={process.env.LA1TV_API_ENDPOINT} />
+          <link rel="preconnect" href={process.env.S3_DOMAIN} />
           <meta name="viewport" content="initial-scale=1.0, width=devide-width" />
           <link rel="apple-touch-icon" sizes="57x57" href="/static/favicon/apple-touch-icon-57x57.png" />
           <link rel="apple-touch-icon" sizes="60x60" href="/static/favicon/apple-touch-icon-60x60.png" />
