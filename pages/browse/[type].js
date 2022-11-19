@@ -18,7 +18,7 @@ const Index = ({ type }) => {
   const [rows, setRows] = React.useState([])
 
   const addRow = () => {
-    fetch(`${process.env.FRONTEND_DOMAIN}/api/recommendations/${type}?funct=count`).then((response) => {
+    fetch(`${process.env.NEXT_PUBLIC_FRONTEND_DOMAIN}/api/recommendations/${type}?funct=count`).then((response) => {
       response.json().then((res) => {
         const newRows = []
         const loopCount = Math.floor(res.count / columns) + 1

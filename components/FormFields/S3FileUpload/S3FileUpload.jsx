@@ -7,7 +7,7 @@ import fetch from 'isomorphic-unfetch'
 import { fileState } from 'utilities/hooks'
 
 async function getPUT (apikey, bucket, filename) {
-  const res = await fetch(`${process.env.FRONTEND_DOMAIN}/api/s3?bucket=${bucket}&file=${encodeURIComponent(filename)}`, {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_FRONTEND_DOMAIN}/api/s3?bucket=${bucket}&file=${encodeURIComponent(filename)}`, {
     method: 'POST',
     headers: { 'x-api-key': apikey }
   })

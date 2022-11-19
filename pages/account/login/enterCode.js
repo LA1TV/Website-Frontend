@@ -17,7 +17,7 @@ const CodePage = () => {
     <TextField label="Code" {...codeState}></TextField>
     <Button onClick={
       async function () {
-        const res = await fetch(`${process.env.FRONTEND_DOMAIN}/api/account/exchangeCode?code=${codeState.value}`)
+        const res = await fetch(`${process.env.NEXT_PUBLIC_FRONTEND_DOMAIN}/api/account/exchangeCode?code=${codeState.value}`)
 
         const statusCode = res.status
 

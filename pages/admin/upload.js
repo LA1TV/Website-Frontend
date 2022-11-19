@@ -22,7 +22,7 @@ const Index = () => {
   const router = useRouter()
 
   const save = async function (apikey, title, description, thumbnailBucket, thumbnailObject, videoBucket, videoObject, releaseDate) {
-    const res = await fetch(`${process.env.FRONTEND_DOMAIN}/api/admin/upload`, {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_FRONTEND_DOMAIN}/api/admin/upload`, {
       method: 'POST',
       headers: { 'x-api-key': apikey, 'Content-Type': 'application/json' },
       body: JSON.stringify({ title, description, thumbnailBucket, thumbnailObject, videoBucket, videoObject, releaseDate })
