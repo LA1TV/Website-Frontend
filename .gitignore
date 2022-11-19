@@ -60,4 +60,7 @@ typings/
 # macOS files
 .DS_Store
 
+.env
+
+#legacy config
 config.json
