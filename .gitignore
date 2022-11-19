@@ -61,6 +61,7 @@ typings/
 .DS_Store
 
 .env
+/static/__ENV.js
 
 #legacy config
 config.json

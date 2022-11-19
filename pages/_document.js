@@ -1,5 +1,6 @@
 import React from 'react'
 import Document, { Html, Head, Main, NextScript } from 'next/document'
+import Script from 'next/script'
 import { ServerStyleSheet } from 'styled-components'
 
 export default class MyDocument extends Document {
@@ -31,6 +32,7 @@ export default class MyDocument extends Document {
   render () {
     return (
       <Html>
+        <script src="/static/__ENV.js"/>
         <Head />
         <body>
           <Main />

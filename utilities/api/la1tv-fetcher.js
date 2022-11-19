@@ -4,7 +4,7 @@ const la1tvFetcher = async ({ url, method = 'GET', formData = false, apikey = nu
   const requestUrl = (process.env.LA1TV_API_ENDPOINT || process.env.LA1TV_API_ENDPOINT) + url
 
   if (apikey === null) {
-    apikey = process.env.LA1TV_API_KEY || process.env.LA1TV_API_KEY
+    apikey = process.env.LA1TV_API_KEY
   }
 
   let response, statusCode

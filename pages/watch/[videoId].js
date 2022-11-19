@@ -6,6 +6,7 @@ import VideoDisplay from 'components/VideoDisplay'
 import Paragraph from 'components/Paragraph'
 import Heading from 'components/Heading'
 import Error from 'next/error'
+import env from 'utilities/env'
 
 const Post = ({ name, description, Streamables, thumbnailS3Bucket, thumbnailS3Object, statusCode, releaseDate }) => {
   if (statusCode !== 200) return <Error statusCode={statusCode} />
@@ -24,11 +25,11 @@ const Post = ({ name, description, Streamables, thumbnailS3Bucket, thumbnailS3Ob
     name: name,
     description: description,
     thumbnailUrl: [
-      `${process.env.NEXT_PUBLIC_S3_DOMAIN}/${thumbnailS3Bucket}/${thumbnailS3Object}`
+      `${process.env.PUBLIC_S3_DOMAIN}/${thumbnailS3Bucket}/${thumbnailS3Object}`
     ],
     uploadDate: releaseDate,
     // duration: 'PT16M06S',
-    contentUrl: `${process.env.NEXT_PUBLIC_S3_DOMAIN}/${Streamables[0].s3Bucket}/${Streamables[0].s3Object}`,
+    contentUrl: `${process.env.PUBLIC_S3_DOMAIN}/${Streamables[0].s3Bucket}/${Streamables[0].s3Object}`,
     regionsAllowed: 'GB'
   })
 
@@ -41,7 +42,7 @@ const Post = ({ name, description, Streamables, thumbnailS3Bucket, thumbnailS3Ob
       <Center>
         <VideoDisplay
           streamables={Streamables}
-          poster={`${process.env.NEXT_PUBLIC_S3_DOMAIN}/${thumbnailS3Bucket}/${thumbnailS3Object}`}
+          poster={`${env('S3_DOMAIN')}/${thumbnailS3Bucket}/${thumbnailS3Object}`}
         />
         <Sidebar left={left} right={right} sidebarOnRight minWidth="50%" sidebarWidth="22rem"/>
       </Center>
@@ -50,7 +51,7 @@ const Post = ({ name, description, Streamables, thumbnailS3Bucket, thumbnailS3Ob
 }
 
 Post.getInitialProps = async ({ query: { videoId } }) => {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_FRONTEND_DOMAIN}/api/watch?videoId=${videoId}`)
+  const res = await fetch(`${env('FRONTEND_DOMAIN')}/api/watch?videoId=${videoId}`)
 
   const statusCode = res.status
 
