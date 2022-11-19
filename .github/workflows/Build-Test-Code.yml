@@ -38,7 +38,7 @@ jobs:
     - run: npm install --global yarn
     - run: cd $GITHUB_WORKSPACE && yarn install
     # Run the tests
-    - run: cp $GITHUB_WORKSPACE/config-example.json $GITHUB_WORKSPACE/config.json
+    - run: cp $GITHUB_WORKSPACE/.env.template $GITHUB_WORKSPACE/.env
     - run: cd $GITHUB_WORKSPACE && yarn pretest
     - run: cd $GITHUB_WORKSPACE && yarn test
 
@@ -64,6 +64,5 @@ jobs:
     - run: npm install --global yarn
     - run: cd $GITHUB_WORKSPACE && yarn install
     # Run the build
-    - run: cp $GITHUB_WORKSPACE/config-example.json $GITHUB_WORKSPACE/config.json
     - run: cd $GITHUB_WORKSPACE && yarn build
     - run: cd $GITHUB_WORKSPACE && yarn reportCoverage

@@ -7,6 +7,6 @@ cache:
 install: yarn
 script:
   #- yarn test
-  - cp config-example.json config.json
+  - cp .env.template .env
   - yarn build
   - yarn reportCoverage
