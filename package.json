@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "yarn react-env --prefix PUBLIC --dest ./static && next dev",
     "jest": "yarn test:coverage --coverage --watch",
-    "clean": "git clean -xfdq --exclude=config.json",
+    "clean": "git clean -xfdq --exclude=.env",
     "build": "next build",
     "test": "yarn test:lint && yarn test:coverage",
     "test:lint": "eslint ./ --ext js,jsx",
