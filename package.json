@@ -11,7 +11,7 @@
     "test": "yarn test:lint && yarn test:coverage",
     "test:lint": "eslint ./ --ext js,jsx",
     "test:coverage": "jest",
-    "pretest": "node scripts/pretest.js",
+    "pretest": "cp .env.template .env",
     "reportCoverage": "echo 'coveralls coming soon'",
     "start": "yarn react-env --prefix PUBLIC --dest ./static && NODE_ENV=production next start",
     "storybook": "start-storybook -p 6006"
