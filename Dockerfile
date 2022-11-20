@@ -1,20 +1,21 @@
 # Dockerfile
 
 # base image
-FROM node:16
+FROM node:18
 
 # create & set working directory
 WORKDIR /opt/app
 
-# Install packages using Yarn
-ADD package.json yarn.lock /tmp/
-RUN cd /tmp && yarn
-RUN mkdir -p /opt/app && cd /opt/app && ln -s /tmp/node_modules
-
 # Copy the code
+RUN mkdir -p /opt/app
 ADD . /opt/app
 
-# start app
-RUN yarn run build
+# Install packages using Yarn
+RUN cd /opt/app && yarn install
+
+# build app
+RUN cd /opt/app && yarn run build
+# setup docker to expose our port
 EXPOSE 3000
-CMD yarn run start
+# Commands to be run when the image starts
+CMD cd /opt/app && yarn run start
