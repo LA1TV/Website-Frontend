@@ -16,17 +16,12 @@ RUN yarn run build
 FROM node:16 AS runner
 WORKDIR /opt/app
 
-RUN addgroup -g 1001 -S nodejs
-RUN adduser -S nextjs -u 1001
-
 # You only need to copy next.config.js if you are NOT using the default configuration
 # COPY --from=builder /opt/app/next.config.js ./
-COPY --from=builder --chown=nextjs:nodejs /opt/app/static ./static
-COPY --from=builder --chown=nextjs:nodejs /opt/app/.next ./.next
+COPY --from=builder /opt/app/static ./static
+COPY --from=builder /opt/app/.next ./.next
 COPY --from=builder /opt/app/node_modules ./node_modules
 COPY --from=builder /opt/app/package.json ./package.json
-
-USER nextjs
 
 # ENV NEXT_TELEMETRY_DISABLED 1
 
