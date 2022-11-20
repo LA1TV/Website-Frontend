@@ -2,8 +2,8 @@ import React from 'react'
 import VideoLink, { VideoLinkSkeleton } from '../VideoLink'
 import Row from 'layouts/Row'
 import fetch from 'isomorphic-unfetch'
-import config from '../../config'
 import styled from 'styled-components'
+import env from 'utilities/env'
 
 const StyledDiv = styled.div`
 min-height: 10vh
@@ -25,7 +25,7 @@ const RecommendationsRow = ({ type, columns, rows = 1, page = 1, loadedCallback 
   }
 
   const loadRecommendations = function (page) {
-    fetch(`${config.env.FRONTEND_DOMAIN}/api/recommendations/${type}?page=${page}&count=${rows * columns}`).then((response) => {
+    fetch(`${env('FRONTEND_DOMAIN')}/api/recommendations/${type}?page=${page}&count=${rows * columns}`).then((response) => {
       response.json().then((res) => {
         const recommend = chunkArray(res, columns)
         setRecommendations(recommend)
@@ -51,7 +51,7 @@ const RecommendationsRow = ({ type, columns, rows = 1, page = 1, loadedCallback 
             <VideoLink
               title={r.name}
               description={r.description}
-              poster={`${config.env.S3_DOMAIN}/${r.thumbnailS3Bucket}/${r.thumbnailS3Object}`}
+              poster={`${env('S3_DOMAIN')}/${r.thumbnailS3Bucket}/${r.thumbnailS3Object}`}
               link={`/watch/${r.id}`}
             ></VideoLink>
           </span>)}

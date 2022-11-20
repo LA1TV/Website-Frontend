@@ -2,7 +2,7 @@ import React, { Suspense } from 'react'
 import Paragraph from 'components/Paragraph'
 import Heading from 'components/Heading'
 import fetch from 'isomorphic-unfetch'
-import config from '../../config.json'
+import env from 'utilities/env'
 
 const titles = {
   latest: 'The latest from LA1'
@@ -19,7 +19,7 @@ const Index = ({ type }) => {
   const [rows, setRows] = React.useState([])
 
   const addRow = () => {
-    fetch(`${config.env.FRONTEND_DOMAIN}/api/recommendations/${type}?funct=count`).then((response) => {
+    fetch(`${env('FRONTEND_DOMAIN')}/api/recommendations/${type}?funct=count`).then((response) => {
       response.json().then((res) => {
         const newRows = []
         const loopCount = Math.floor(res.count / columns) + 1

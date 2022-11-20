@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import VideoJS from '../VideoJS'
-import config from '../../config.json'
+import env from 'utilities/env'
 
 const StyledPlayer = styled(VideoJS)`
   width: 100%;
@@ -19,7 +19,7 @@ const StyledVideoDisplayDiv = styled.div`
 
 const VideoDisplay = ({ className, streamables, poster }) => {
   const newSources = streamables.map((streamable, key) => {
-    return { src: `${process.env.S3_DOMAIN || config.env.S3_DOMAIN}/${streamable.s3Bucket}/${streamable.s3Object}`, type: streamable.type }
+    return { src: `${env('S3_DOMAIN')}/${streamable.s3Bucket}/${streamable.s3Object}`, type: streamable.type }
   })
   const videoJsOptions = {
     autoplay: true,

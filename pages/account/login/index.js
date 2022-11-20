@@ -4,9 +4,9 @@ import Paragraph from 'components/Paragraph'
 import TextField from 'components/FormFields/TextField'
 import Button from 'components/Button'
 import { inputState } from 'utilities/hooks'
-import config from '../../../config.json'
 import fetch from 'isomorphic-unfetch'
 import { useRouter } from 'next/router'
+import env from 'utilities/env';
 
 const Index = () => {
   const emailState = inputState()
@@ -18,7 +18,7 @@ const Index = () => {
     <TextField label="Email" {...emailState}></TextField>
     <Button onClick={
       async function () {
-        const res = await fetch(`${config.env.FRONTEND_DOMAIN}/api/account/login?email=${emailState.value}&t=${Date.now()}`)
+        const res = await fetch(`${env('FRONTEND_DOMAIN')}/api/account/login?email=${emailState.value}&t=${Date.now()}`)
 
         const statusCode = res.status
 

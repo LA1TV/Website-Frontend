@@ -4,9 +4,9 @@ import Paragraph from 'components/Paragraph'
 import TextField from 'components/FormFields/TextField'
 import Button from 'components/Button'
 import { inputState } from 'utilities/hooks'
-import config from '../../../config.json'
 import fetch from 'isomorphic-unfetch'
 import { useRouter } from 'next/router'
+import env from 'utilities/env'
 
 const CodePage = () => {
   const codeState = inputState()
@@ -18,7 +18,7 @@ const CodePage = () => {
     <TextField label="Code" {...codeState}></TextField>
     <Button onClick={
       async function () {
-        const res = await fetch(`${config.env.FRONTEND_DOMAIN}/api/account/exchangeCode?code=${codeState.value}`)
+        const res = await fetch(`${env('FRONTEND_DOMAIN')}/api/account/exchangeCode?code=${codeState.value}`)
 
         const statusCode = res.status
 

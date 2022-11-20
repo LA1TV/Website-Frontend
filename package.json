@@ -4,16 +4,16 @@
   "description": "New website frontend written in Node",
   "main": "index.js",
   "scripts": {
-    "dev": "next dev",
+    "dev": "yarn react-env --prefix PUBLIC --dest ./static && next dev",
     "jest": "yarn test:coverage --coverage --watch",
-    "clean": "git clean -xfdq --exclude=config.json",
+    "clean": "git clean -xfdq --exclude=.env",
     "build": "next build",
     "test": "yarn test:lint && yarn test:coverage",
     "test:lint": "eslint ./ --ext js,jsx",
     "test:coverage": "jest",
-    "pretest": "node scripts/pretest.js",
+    "pretest": "cp .env.template .env",
     "reportCoverage": "echo 'coveralls coming soon'",
-    "start": "NODE_ENV=production next start",
+    "start": "yarn react-env --prefix PUBLIC --dest ./static && NODE_ENV=production next start",
     "storybook": "start-storybook -p 6006"
   },
   "repository": {
@@ -34,6 +34,7 @@
   },
   "homepage": "https://github.com/LA1TV/Website-Frontend#readme",
   "dependencies": {
+    "@beam-australia/react-env": "^3.1.1",
     "@storybook/addon-controls": "^6.5.9",
     "isomorphic-unfetch": "^3.0.0",
     "next": "12",

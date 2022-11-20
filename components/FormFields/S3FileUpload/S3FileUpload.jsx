@@ -4,11 +4,11 @@ import Paragraph from 'components/Paragraph'
 import Button from 'components/Button'
 import AuthContext from 'components/AuthenticatedArea/context'
 import fetch from 'isomorphic-unfetch'
-import config from '../.././../config.json'
 import { fileState } from 'utilities/hooks'
+import env from 'utilities/env'
 
 async function getPUT (apikey, bucket, filename) {
-  const res = await fetch(`${config.env.FRONTEND_DOMAIN}/api/s3?bucket=${bucket}&file=${encodeURIComponent(filename)}`, {
+  const res = await fetch(`${env('FRONTEND_DOMAIN')}/api/s3?bucket=${bucket}&file=${encodeURIComponent(filename)}`, {
     method: 'POST',
     headers: { 'x-api-key': apikey }
   })
